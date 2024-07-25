@@ -4,15 +4,15 @@ import { MatPaginator } from '@angular/material/paginator';
 import { SelectionModel } from '@angular/cdk/collections';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
+import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Employee } from '../../models/employee.model';
 import { AppState } from '../../store/app.state';
 import { loadEmployees, deleteEmployee, updateEmployee } from '../../store/actions/employee.actions';
 import { selectAllEmployees, selectTotalEmployees } from '../../store/selectors/employee.selectors';
-import { AuthService } from '../../services/auth.service';
-import { MatDrawer } from '@angular/material/sidenav';
-import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { DeleteConfirmationDialogComponent } from '../delete-confirmation-dialog/delete-confirmation-dialog.component';
+import { AuthService } from '../../services/auth.service'; // Import AuthService
+import { MatDrawer } from '@angular/material/sidenav'; // Import MatDrawer
 import { EmployeeAddComponent } from '../employee-add/employee-add.component';
 
 @Component({
@@ -25,19 +25,19 @@ export class EmployeeListComponent implements OnInit, AfterViewInit {
   dataSource: MatTableDataSource<Employee> = new MatTableDataSource<Employee>();
   totalEmployees$: Observable<number>;
   selection = new SelectionModel<Employee>(true, []);
+  showAddForm = false;
   selectedEmployee: Employee | null = null;
   drawerTitle: string = '';
-  showAddForm = false;
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
-  @ViewChild('drawer') drawer!: MatDrawer;
-  @ViewChild('employeeAdd') employeeAddComponent!: EmployeeAddComponent;
+  @ViewChild('drawer') drawer!: MatDrawer; // ViewChild to access the drawer
+  @ViewChild('employeeAdd') employeeAddComponent!: EmployeeAddComponent; // ViewChild to access the EmployeeAddComponent
 
   constructor(
     private store: Store<AppState>,
+    public dialog: MatDialog,
     private snackBar: MatSnackBar,
-    public authService: AuthService,
-    private dialog: MatDialog
+    public authService: AuthService // Inject AuthService
   ) {
     this.totalEmployees$ = this.store.select(selectTotalEmployees);
   }
@@ -61,35 +61,16 @@ export class EmployeeListComponent implements OnInit, AfterViewInit {
     });
   }
 
-  openDrawer(title: string): void {
-    this.drawerTitle = title;
-    this.selectedEmployee = null;
+  editEmployee(employee: Employee): void {
+    this.selectedEmployee = employee;
+    this.drawerTitle = 'Edit Employee';
     this.showAddForm = true;
     this.drawer.open();
-
-    // Reset the form and mark as untouched
-    if (this.employeeAddComponent) {
-      this.employeeAddComponent.resetForm();
-    }
   }
 
-  closeDrawer(): void {
-    this.showAddForm = false;
-    this.selectedEmployee = null;
-    this.drawer.close();
-  }
-
-  editEmployee(employee: Employee): void {
-    if (this.selection.isSelected(employee)) {
-      this.selectedEmployee = employee;
-      this.drawerTitle = 'Edit Employee';
-      this.showAddForm = true;
-      this.drawer.open();
-    }
-  }
 
   deleteEmployee(employee: Employee): void {
-    if (this.authService.hasRole('SOP2') && this.selection.isSelected(employee)) {
+    if (this.authService.hasRole('SOP2')  && this.selection.isSelected(employee)) {
       const dialogConfig = new MatDialogConfig();
       dialogConfig.width = '400px';
       dialogConfig.panelClass = 'custom-dialog-container';
@@ -99,11 +80,10 @@ export class EmployeeListComponent implements OnInit, AfterViewInit {
       dialogRef.afterClosed().subscribe(result => {
         if (result) {
           this.store.dispatch(deleteEmployee({ id: employee.id }));
-          this.selection.clear();
         }
       });
     } else {
-      alert('You do not have permission to delete an employee.');
+      alert('Please select the record.');
     }
   }
 
@@ -136,28 +116,48 @@ export class EmployeeListComponent implements OnInit, AfterViewInit {
     // Logic to view employee details
   }
 
-  showSnackBar(message: string): void {
-    this.snackBar.open(message, 'Close', {
+  showSnackBar(): void {
+    this.snackBar.open('Employee has been added successfully.', 'Close', {
       duration: 3000,
     });
   }
+  openDrawer(title: string): void {
+    this.drawerTitle = title;
+    this.selectedEmployee = null;
+    this.showAddForm = true;
+    this.drawer.open();
 
+    // Reset the form and mark as untouched
+    if (this.employeeAddComponent) {
+      this.employeeAddComponent.resetForm();
+    }
+  }
+  closeDrawer(): void {
+    this.showAddForm = false;
+    this.selectedEmployee = null;
+    this.drawer.close(); // Close the drawer
+  }
+
+  /** Whether the number of selected elements matches the total number of rows. */
   isAllSelected() {
     const numSelected = this.selection.selected.length;
     const numRows = this.dataSource.data.length;
     return numSelected === numRows;
   }
 
+  /** Whether the number of selected elements is greater than zero but less than the total number of rows. */
   isAnySelected() {
     return this.selection.selected.length > 0;
   }
 
+  /** Selects all rows if they are not all selected; otherwise clear selection. */
   masterToggle() {
     this.isAllSelected() ?
       this.selection.clear() :
       this.dataSource.data.forEach(row => this.selection.select(row));
   }
 
+  /** The label for the checkbox on the passed row */
   checkboxLabel(row?: Employee): string {
     if (!row) {
       return `${this.isAllSelected() ? 'select' : 'deselect'} all`;
@@ -167,10 +167,15 @@ export class EmployeeListComponent implements OnInit, AfterViewInit {
 
   toggleSelection(row: Employee): void {
     this.selection.toggle(row);
+    if (this.selection.isSelected(row)) {
+      this.editEmployee(row);
+    }
   }
-
   onCheckboxChange(event: Event, row: Employee): void {
     event.stopPropagation();
     this.toggleSelection(row);
+    if (this.selection.isSelected(row)) {
+      this.editEmployee(row);
+    }
   }
 }
