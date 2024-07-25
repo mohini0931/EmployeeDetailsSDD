@@ -1,0 +1,47 @@
+<div class="add-employee-container">
+    <mat-card class="add-employee-card">
+      <mat-card-title>
+        <span>Add Employee</span>
+        <button mat-icon-button (click)="cancel()">
+          <mat-icon>close</mat-icon>
+        </button>
+      </mat-card-title>
+      <mat-card-content>
+        <form #employeeForm="ngForm" (ngSubmit)="onSubmit(employeeForm)">
+          <mat-form-field appearance="fill" class="full-width">
+            <mat-label>Name</mat-label>
+            <input matInput [(ngModel)]="employee.name" name="name" required>
+            <mat-error *ngIf="employeeForm.controls['name']?.invalid && employeeForm.controls['name']?.touched">
+              Name is required
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field appearance="fill" class="full-width">
+            <mat-label>Email</mat-label>
+            <input matInput [(ngModel)]="employee.email" name="email" required email>
+            <mat-error *ngIf="employeeForm.controls['email']?.invalid && employeeForm.controls['email']?.touched">
+              Enter a valid email
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field appearance="fill" class="full-width">
+            <mat-label>Address</mat-label>
+            <input matInput [(ngModel)]="employee.address" name="address" required>
+            <mat-error *ngIf="employeeForm.controls['address']?.invalid && employeeForm.controls['address']?.touched">
+              Address is required
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field appearance="fill" class="full-width">
+            <mat-label>Phone</mat-label>
+            <input matInput [(ngModel)]="employee.phone" name="phone" required>
+            <mat-error *ngIf="employeeForm.controls['phone']?.invalid && employeeForm.controls['phone']?.touched">
+              Phone is required
+            </mat-error>
+          </mat-form-field>
+          <div class="button-group">
+            <button mat-button type="button" (click)="cancel()">Cancel</button>
+            <button mat-raised-button color="primary" type="submit">Add</button>
+          </div>
+        </form>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  
