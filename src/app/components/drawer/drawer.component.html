@@ -1,0 +1,15 @@
+<mat-drawer-container class="drawer-container">
+    <mat-drawer #drawer mode="side" opened class="drawer">
+      <div class="drawer-header">
+        <h2>{{ title }}</h2>
+        <button mat-icon-button (click)="closeDrawer()">
+          <mat-icon>close</mat-icon>
+        </button>
+      </div>
+      <ng-content></ng-content>
+    </mat-drawer>
+    <mat-drawer-content>
+      <ng-content select="[drawer-content]"></ng-content>
+    </mat-drawer-content>
+  </mat-drawer-container>
+  

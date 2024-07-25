@@ -1,5 +1,4 @@
-export enum UserRole {
-    Admin = 'Admin',
-    User = 'User'
-  }
-  
+export interface UserRole {
+  username: string;
+  role: 'SOP1' | 'SOP2';
+}

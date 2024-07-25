@@ -1,8 +1,8 @@
-import { Component, Output, EventEmitter } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output, SimpleChanges, OnChanges } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Store } from '@ngrx/store';
-import { NgForm } from '@angular/forms';
 import { AppState } from '../../store/app.state';
-import { addEmployee } from '../../store/actions/employee.actions';
+import { addEmployee, updateEmployee } from '../../store/actions/employee.actions';
 import { Employee } from '../../models/employee.model';
 
 @Component({
@@ -10,32 +10,77 @@ import { Employee } from '../../models/employee.model';
   templateUrl: './employee-add.component.html',
   styleUrls: ['./employee-add.component.css']
 })
-export class EmployeeAddComponent {
-  @Output() formClose = new EventEmitter<void>();
+export class EmployeeAddComponent implements OnInit, OnChanges {
+  @Input() employee: Employee | null = null;
+  @Output() formClosed = new EventEmitter<void>();
+  employeeForm: FormGroup;
 
-  employee: Employee = {
-    id: 0,
-    name: '',
-    email: '',
-    address: '',
-    phone: ''
-  };
+  constructor(private fb: FormBuilder, private store: Store<AppState>) {
+    this.employeeForm = this.fb.group({
+      id: [{ value: '', disabled: true }, Validators.required],
+      name: ['', Validators.required],
+      email: ['', [Validators.required, Validators.email]],
+      address: ['', Validators.required],
+      phone: ['', Validators.required]
+    });
+  }
 
-  constructor(private store: Store<AppState>) {}
-
-  onSubmit(form: NgForm): void {
-    if (form.valid) {
-      this.store.dispatch(addEmployee({ employee: this.employee }));
-      this.formClose.emit();
+  ngOnInit(): void {
+    if (this.employee) {
+      this.employeeForm.patchValue(this.employee);
     } else {
-      form.controls['name'].markAsTouched();
-      form.controls['email'].markAsTouched();
-      form.controls['address'].markAsTouched();
-      form.controls['phone'].markAsTouched();
+      this.employeeForm.reset();
+      this.markFormAsUntouched(this.employeeForm);
     }
   }
 
-  cancel(): void {
-    this.formClose.emit();
+  ngOnChanges(changes: SimpleChanges): void {
+    if (changes['employee'] && changes['employee'].currentValue) {
+      this.employeeForm.patchValue(this.employee as Employee);
+    } else if (changes['employee'] && changes['employee'].currentValue === null) {
+      this.employeeForm.reset();
+      this.markFormAsUntouched(this.employeeForm);
+    }
+  }
+
+  onSubmit(): void {
+    if (this.employeeForm.valid) {
+      const employeeData: Employee = {
+        ...this.employeeForm.getRawValue(),
+        id: this.employee?.id ?? this.generateId()
+      };
+      if (this.employee) {
+        this.store.dispatch(updateEmployee({ employee: employeeData }));
+      } else {
+        this.store.dispatch(addEmployee({ employee: employeeData }));
+      }
+      this.formClosed.emit();
+    } else {
+      this.markFormAsTouched(this.employeeForm);
+    }
+  }
+
+  onCancel(): void {
+    this.formClosed.emit();
+  }
+
+  private generateId(): number {
+    return Math.floor(Math.random() * 100000);
+  }
+
+  private markFormAsTouched(formGroup: FormGroup): void {
+    Object.values(formGroup.controls).forEach(control => {
+      control.markAsTouched();
+    });
+  }
+
+  private markFormAsUntouched(formGroup: FormGroup): void {
+    Object.values(formGroup.controls).forEach(control => {
+      control.markAsUntouched();
+    });
+  }
+  resetForm(): void {
+    this.employeeForm.reset();
+    this.markFormAsUntouched(this.employeeForm);
   }
 }

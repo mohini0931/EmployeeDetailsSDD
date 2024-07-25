@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from "@angular/common/http";
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -11,6 +12,10 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from "@angular/material/toolbar";
 import { MatCheckboxModule } from "@angular/material/checkbox";
+import { MatSnackBarModule } from '@angular/material/snack-bar'; // Import MatSnackBarModule
+import { MatSidenavModule } from "@angular/material/sidenav";
+
+import { MatDialogModule } from "@angular/material/dialog";
 import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
@@ -26,6 +31,9 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { AuthGuard } from './guards/auth.guard';
 import { AuthService } from './services/auth.service';
 import { employeeReducer } from './store/reducers/employee.reducer';
+import { EmployeeEffects } from './store/effects/employee.effects';
+import { DeleteConfirmationDialogComponent } from './components/delete-confirmation-dialog/delete-confirmation-dialog.component';
+import { DrawerComponent } from './components/drawer/drawer.component';
 
 @NgModule({
   declarations: [
@@ -35,11 +43,14 @@ import { employeeReducer } from './store/reducers/employee.reducer';
     EmployeeAddComponent,
     EmployeeEditComponent,
     EmployeeDeleteComponent,
-    DashboardComponent
+    DashboardComponent,
+    DeleteConfirmationDialogComponent,
+    DrawerComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     ReactiveFormsModule,
     FormsModule,
     BrowserAnimationsModule,
@@ -49,10 +60,13 @@ import { employeeReducer } from './store/reducers/employee.reducer';
     MatTableModule,
     MatToolbarModule,
     MatPaginatorModule,
+    MatDialogModule,
+    MatSnackBarModule,
     MatCheckboxModule,
+    MatSidenavModule,
     MatIconModule,
     StoreModule.forRoot({ employees: employeeReducer }),
-    EffectsModule.forRoot([]),
+    EffectsModule.forRoot([EmployeeEffects]),
     StoreDevtoolsModule.instrument({ maxAge: 25 })
   ],
   providers: [AuthGuard, AuthService],
