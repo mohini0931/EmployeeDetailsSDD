@@ -30,9 +30,9 @@
 }
 
 .dot.blue { background-color: #2196f3; }
-.dot.gray { background-color: #9e9e9e; }
-.dot.orange { background-color: #ff9800; }
-.dot.green { background-color: #4caf50; }
+.dot.gray { background-color: #a8c2f0; }
+.dot.orange { background-color: #7cbad3; }
+.dot.green { background-color: #b9bfb9; }
 
 .expense-entries {
   display: flex;

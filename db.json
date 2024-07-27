@@ -29,15 +29,8 @@
       "phone": "(555) 123-4567"
     },
     {
-      "id": "7",
-      "name": "John Ed",
-      "email": "johnsmith@mail.com",
-      "address": "456 Elm St, Metropolis, USA",
-      "phone": "(555) 234-5678"
-    },
-    {
       "id": "8",
-      "name": "Alice Johnson",
+      "name": "Alice Patil",
       "email": "alicejohnson@mail.com",
       "address": "789 Oak St, Gotham, USA",
       "phone": "(555) 345-6789"
@@ -76,6 +69,13 @@
       "email": "mo@gmail.com",
       "address": "dso",
       "phone": "843847837458"
+    },
+    {
+      "id": 48875,
+      "name": "Mohini",
+      "email": "m@gmail.com",
+      "address": "dso",
+      "phone": "47568346583"
     }
   ]
 }

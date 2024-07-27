@@ -35,13 +35,13 @@ export class ExpenseComponent implements OnInit, AfterViewInit {
         ctx.fillStyle = '#2196f3'; // Salary color
         ctx.fillRect(0, 0, salaryWidth, canvas.height);
 
-        ctx.fillStyle = '#9e9e9e'; // Bonuses color
+        ctx.fillStyle = '#a8c2f0'; // Bonuses color
         ctx.fillRect(salaryWidth, 0, bonusesWidth, canvas.height);
 
-        ctx.fillStyle = '#ff9800'; // Entertainment color
+        ctx.fillStyle = '#7cbad3'; // Entertainment color
         ctx.fillRect(salaryWidth + bonusesWidth, 0, entertainmentWidth, canvas.height);
 
-        ctx.fillStyle = '#4caf50'; // Claims color
+        ctx.fillStyle = '#b9bfb9'; // Claims color
         ctx.fillRect(salaryWidth + bonusesWidth + entertainmentWidth, 0, claimsWidth, canvas.height);
       }
     });
