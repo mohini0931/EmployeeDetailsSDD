@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
+import { Component, OnInit, ViewChild, AfterViewInit, ChangeDetectorRef } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatPaginator } from '@angular/material/paginator';
 import { SelectionModel } from '@angular/cdk/collections';
@@ -12,8 +12,9 @@ import { selectAllEmployees, selectTotalEmployees } from '../../store/selectors/
 import { AuthService } from '../../services/auth.service';
 import { MatDrawer } from '@angular/material/sidenav';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
-import { DeleteConfirmationDialogComponent } from '../delete-confirmation-dialog/delete-confirmation-dialog.component';
+import { DeleteConfirmationDialogComponent } from '../custom-components/delete-confirmation-dialog/delete-confirmation-dialog.component';
 import { EmployeeAddComponent } from '../employee-add/employee-add.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-employee-list',
@@ -28,6 +29,7 @@ export class EmployeeListComponent implements OnInit, AfterViewInit {
   selectedEmployee: Employee | null = null;
   drawerTitle: string = '';
   showAddForm = false;
+  deleteIconClicked: boolean = false;
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild('drawer') drawer!: MatDrawer;
@@ -37,7 +39,9 @@ export class EmployeeListComponent implements OnInit, AfterViewInit {
     private store: Store<AppState>,
     private snackBar: MatSnackBar,
     public authService: AuthService,
-    private dialog: MatDialog
+    private dialog: MatDialog,
+    private cdr: ChangeDetectorRef,
+    private router: Router
   ) {
     this.totalEmployees$ = this.store.select(selectTotalEmployees);
   }
@@ -66,11 +70,12 @@ export class EmployeeListComponent implements OnInit, AfterViewInit {
     this.selectedEmployee = null;
     this.showAddForm = true;
     this.drawer.open();
-
-    // Reset the form and mark as untouched
-    if (this.employeeAddComponent) {
-      this.employeeAddComponent.resetForm();
-    }
+    
+    this.drawer.openedChange.subscribe((opened) => {
+      if (opened && this.employeeAddComponent) {
+        this.employeeAddComponent.resetForm();
+      }
+    });
   }
 
   closeDrawer(): void {
@@ -79,23 +84,32 @@ export class EmployeeListComponent implements OnInit, AfterViewInit {
     this.drawer.close();
   }
 
-  editEmployee(employee: Employee): void {
+  editEmployee(event:Event,employee: Employee): void {
+    event.stopPropagation();
+    this.deleteIconClicked = false;
     if (this.selection.isSelected(employee)) {
       this.selectedEmployee = employee;
       this.drawerTitle = 'Edit Employee';
       this.showAddForm = true;
       this.drawer.open();
+
+      this.drawer.openedChange.subscribe((opened) => {
+        if (opened && this.employeeAddComponent) {
+          this.employeeAddComponent.employeeForm.patchValue(this.selectedEmployee as { [key: string]: any });
+        }
+      });
     }
   }
 
-  deleteEmployee(employee: Employee): void {
+  deleteEmployee(event: Event, employee: Employee): void {
+    event.stopPropagation();
     if (this.authService.hasRole('SOP2') && this.selection.isSelected(employee)) {
       const dialogConfig = new MatDialogConfig();
       dialogConfig.width = '400px';
       dialogConfig.panelClass = 'custom-dialog-container';
-
+  
       const dialogRef = this.dialog.open(DeleteConfirmationDialogComponent, dialogConfig);
-
+  
       dialogRef.afterClosed().subscribe(result => {
         if (result) {
           this.store.dispatch(deleteEmployee({ id: employee.id }));
@@ -103,7 +117,7 @@ export class EmployeeListComponent implements OnInit, AfterViewInit {
         }
       });
     } else {
-      alert('You do not have permission to delete an employee.');
+      alert('Please select the checkbox before deleting an employee.');
     }
   }
 
@@ -132,10 +146,14 @@ export class EmployeeListComponent implements OnInit, AfterViewInit {
     }
   }
 
-  viewEmployeeDetails(employee: Employee): void {
-    // Logic to view employee details
+  onRowClick(row: Employee, event: Event): void {
+    const target = event.target as HTMLElement;
+    if (target && (target.closest('button.mat-icon-button'))) {
+      return;
+    }
+    this.router.navigate(['/employee-details', row.id]);
   }
-
+  
   showSnackBar(message: string): void {
     this.snackBar.open(message, 'Close', {
       duration: 3000,

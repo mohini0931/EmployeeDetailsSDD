@@ -1,0 +1,114 @@
+.team-performance {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 84vh;
+  }
+  
+  .team-performance h2 {
+    margin-top: 0;
+  }
+  
+  .tabs {
+    display: flex;
+    margin-bottom: 20px;
+    max-width: 20%;
+    gap: 20px;
+  }
+  
+  .tabs button {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    background-color: #f8f9fa;
+    cursor: pointer;
+    border-radius: 17px;
+  }
+  
+  .tabs button.active {
+    background-color: #d2e2f3;
+    color: #4d93e8;
+    border-radius: 17px;
+  }
+  
+  .legend {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    max-width: fit-content;
+    gap: 10px;
+  }
+  
+  .legend-item {
+    display: flex;
+    align-items: center;
+  }
+  
+  .legend-item .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 5px;
+  }
+  
+  .legend-item span {
+    color: #9ea0a2;
+  }
+  
+  .perfect-score {
+    background-color: #4caf50;
+  }
+  
+  .good-score {
+    background-color: #2196f3;
+  }
+  
+  .average-score {
+    background-color: #ff9800;
+  }
+  
+  .bad-score {
+    background-color: #f44336;
+  }
+  
+  .team-table {
+    margin-top: 10px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .team-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .team-row.header {
+    border-radius: 20px;
+    background: #eef0f3;
+  }
+  
+  .team-cell {
+    width: 24%;
+    text-align: center;
+  }
+  
+  .team-cell img.avatar {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    margin-right: 5px;
+    vertical-align: middle;
+  }
+  
+  .team-cell:last-child {
+    border-left: 1px solid #ddd;
+  }
+  

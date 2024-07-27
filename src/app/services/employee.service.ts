@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+/* import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
 import { Employee } from '../models/employee.model';
@@ -46,5 +46,45 @@ export class EmployeeService {
   deleteEmployee(id: number): Observable<Employee[]> {
     this.employees = this.employees.filter(emp => emp.id !== id);
     return of(this.employees);
+  }
+}
+ */
+
+import { Injectable } from '@angular/core';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { Employee } from '../models/employee.model';
+
+@Injectable({
+  providedIn: 'root',
+})
+export class EmployeeService {
+  private apiUrl = 'http://localhost:3000/employees';
+  httpOptions = {
+    headers: new HttpHeaders({
+      'Content-Type': 'application/json',
+    }),
+  };
+
+  constructor(private http: HttpClient) {}
+
+  getEmployees(): Observable<Employee[]> {
+    return this.http.get<Employee[]>(this.apiUrl);
+  }
+
+  addEmployee(employee: Employee): Observable<Employee> {
+    return this.http.post<Employee>(this.apiUrl, employee);
+  }
+
+  updateEmployee(employee: Employee): Observable<any> {
+    return this.http.put(
+      `${this.apiUrl}/${employee.id}`,
+      employee,
+      this.httpOptions
+    );
+  }
+
+  deleteEmployee(id: number): Observable<void> {
+    return this.http.delete<void>(`${this.apiUrl}/${id}`);
   }
 }

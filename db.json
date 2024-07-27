@@ -1,0 +1,81 @@
+{
+  "employees": [
+    {
+      "id": "1",
+      "name": "Thomas Hardy",
+      "email": "thomashardy@mail.com",
+      "address": "89 Chiaroscuro Rd, Portland, USA",
+      "phone": "(171) 555-2222"
+    },
+    {
+      "id": "2",
+      "name": "Dominique Perrier",
+      "email": "dominiqueperrier@mail.com",
+      "address": "Obere Str. 57, Berlin, Germany",
+      "phone": "(313) 555-5735"
+    },
+    {
+      "id": "3",
+      "name": "Maria Anders",
+      "email": "mariaanders@mail.com",
+      "address": "25, rue Lauriston, Paris, France",
+      "phone": "(503) 555-9931"
+    },
+    {
+      "id": "6",
+      "name": "Jane Doe",
+      "email": "janedoe@mail.com",
+      "address": "123 Main St, Springfield, USA",
+      "phone": "(555) 123-4567"
+    },
+    {
+      "id": "7",
+      "name": "John Ed",
+      "email": "johnsmith@mail.com",
+      "address": "456 Elm St, Metropolis, USA",
+      "phone": "(555) 234-5678"
+    },
+    {
+      "id": "8",
+      "name": "Alice Johnson",
+      "email": "alicejohnson@mail.com",
+      "address": "789 Oak St, Gotham, USA",
+      "phone": "(555) 345-6789"
+    },
+    {
+      "id": "9",
+      "name": "Bob Brown",
+      "email": "bobbrown@mail.com",
+      "address": "101 Maple St, Star City, USA",
+      "phone": "(555) 456-7890"
+    },
+    {
+      "id": "10",
+      "name": "Carol White",
+      "email": "carolwhite@mail.com",
+      "address": "202 Pine St, Central City, USA",
+      "phone": "(555) 567-8901"
+    },
+    {
+      "id": "72255",
+      "name": "Mohini",
+      "email": "email@rnnail.com",
+      "address": "dso",
+      "phone": "8458347583"
+    },
+    {
+      "id": 5885,
+      "name": "Mohini Narwade",
+      "email": "m@gmail.com",
+      "address": "dso",
+      "phone": "9975800408"
+    },
+    {
+      "id": 37754,
+      "name": "Mohini Patil",
+      "email": "mo@gmail.com",
+      "address": "dso",
+      "phone": "843847837458"
+    }
+  ]
+}

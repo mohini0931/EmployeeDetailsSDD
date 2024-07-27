@@ -1,0 +1,17 @@
+.good-score-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px; /* Adjust as needed */
+  }
+  
+  .vertical-line {
+    width: 2px;
+    height: 20px; /* Adjust height as needed */
+    background-color: #007bff;
+    margin-right: 10px;
+  }
+  
+  .good-score-text {
+    margin: 0;
+  }

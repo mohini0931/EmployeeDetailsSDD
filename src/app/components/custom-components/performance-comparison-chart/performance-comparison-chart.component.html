@@ -1,0 +1,31 @@
+<div class="performance-comparison">
+  <h2>Performance Comparison</h2>
+  <div class="comparison-header">
+    <div class="legend-item">
+      <div class="dot blue"></div>
+      <span>This year</span>
+    </div>
+    <div class="legend-item">
+      <div class="dot gray"></div>
+      <span>Last year</span>
+    </div>
+    <select>
+      <option>All members</option>
+    </select>
+  </div>
+  <div class="graph">
+    <div class="y-axis">
+      <div>300%</div>
+      <div>200%</div>
+      <div>100%</div>
+      <div>0%</div>
+    </div>
+    <div class="bars">
+      <div class="bar-group" *ngFor="let label of labels; let i = index">
+        <div class="bar blue" [style.height.%]="thisYearData[i]"></div>
+        <div class="bar gray" [style.height.%]="lastYearData[i]"></div>
+        <div class="bar-label">{{ label }}</div>
+      </div>
+    </div>
+  </div>
+</div>

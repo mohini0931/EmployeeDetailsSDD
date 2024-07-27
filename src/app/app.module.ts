@@ -27,13 +27,21 @@ import { EmployeeListComponent } from './components/employee-list/employee-list.
 import { EmployeeAddComponent } from './components/employee-add/employee-add.component';
 import { EmployeeEditComponent } from './components/employee-edit/employee-edit.component';
 import { EmployeeDeleteComponent } from './components/employee-delete/employee-delete.component';
-import { DashboardComponent } from './components/dashboard/dashboard.component';
+
 import { AuthGuard } from './guards/auth.guard';
 import { AuthService } from './services/auth.service';
 import { employeeReducer } from './store/reducers/employee.reducer';
 import { EmployeeEffects } from './store/effects/employee.effects';
-import { DeleteConfirmationDialogComponent } from './components/delete-confirmation-dialog/delete-confirmation-dialog.component';
+import { DeleteConfirmationDialogComponent } from "./components/custom-components/delete-confirmation-dialog/delete-confirmation-dialog.component";
 import { DrawerComponent } from './components/drawer/drawer.component';
+import { EmployeeDetailsComponent } from './components/employee-details/employee-details.component';
+import { LeaveComponent } from './components/employee-details/leave/leave.component';
+import { AttendanceComponent } from './components/employee-details/attendance/attendance.component';
+import { PerformanceComponent } from './components/employee-details/performance/performance.component';
+import { DashboardComponent } from "./components/employee-details/dashboard/dashboard.component";
+import { PerformanceCircleComponent } from "./components/custom-components/performance-circle/performance-circle.component";
+import { MyTeamComponent } from './components/custom-components/my-team/my-team.component';
+import { PerformanceComparisonChartComponent } from './components/custom-components/performance-comparison-chart/performance-comparison-chart.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +53,14 @@ import { DrawerComponent } from './components/drawer/drawer.component';
     EmployeeDeleteComponent,
     DashboardComponent,
     DeleteConfirmationDialogComponent,
-    DrawerComponent
+    DrawerComponent,
+    EmployeeDetailsComponent,
+    LeaveComponent,
+    AttendanceComponent,
+    PerformanceComponent,
+    PerformanceCircleComponent,
+    MyTeamComponent,
+    PerformanceComparisonChartComponent
   ],
   imports: [
     BrowserModule,
