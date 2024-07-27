@@ -23,17 +23,10 @@
     },
     {
       "id": "6",
-      "name": "Jane Doe",
+      "name": "Jane Patil",
       "email": "janedoe@mail.com",
       "address": "123 Main St, Springfield, USA",
       "phone": "(555) 123-4567"
-    },
-    {
-      "id": "8",
-      "name": "Alice Patil",
-      "email": "alicejohnson@mail.com",
-      "address": "789 Oak St, Gotham, USA",
-      "phone": "(555) 345-6789"
     },
     {
       "id": "9",

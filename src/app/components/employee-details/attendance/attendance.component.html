@@ -1,20 +1,12 @@
-<!-- <div class="attendance-container">
-    <div class="attendance-header">
-      <h2>Attendance % </h2>
-      <p>89.87%</p>
-      <p>Average score</p>
-    </div>
-    
-  </div> -->
 
   
-  <p>Attendance %</p>
-  <h2>79%</h2>
-  <div class="good-score-container">
-    <div class="vertical-line"></div>
-    <p class="good-score-text">Average score</p>
-  </div>
+  <app-performance-comparison-chart
+  [title] = " title "
+  [thisYearData]="thisYearData" 
+  [lastYearData]="lastYearData" 
+  [labels]="labels"
+  >
 
-
+  </app-performance-comparison-chart>
 
   

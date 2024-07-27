@@ -9,6 +9,7 @@ export class PerformanceComparisonChartComponent implements OnInit {
   @Input() thisYearData: number[] = [];
   @Input() lastYearData: number[] = [];
   @Input() labels: string[] = [];
+  @Input() title: string = '';
 
   constructor() { }
 

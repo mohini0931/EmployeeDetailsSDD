@@ -15,19 +15,15 @@
   background-color: white;
   text-align: center;
   overflow: hidden;
-  padding-bottom: 2rem;
-  height: 500px; 
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added box shadow */
-}
 
+}
 .formClass {
   margin: 1rem;
 }
-
 .login-header {
   background-color: #4caf50;
   padding: 30px;
-  margin-bottom: 2rem; /* Increased bottom margin */
+  margin-bottom: 3rem;
 }
 
 .login-header h1 {
@@ -38,17 +34,28 @@
 
 .input-container {
   margin-bottom: 20px;
-  margin-top: 30px; /* Increased top margin */
 }
 
-.custom-input {
-  width: calc(100% - 40px); /* Adjust width to match padding */
-  padding: 10px 20px;
-  border-radius: 20px;
-  border: 1px solid #ccc;
-  background-color: #e0e0e0;
-  font-size: 16px;
-  box-sizing: border-box; /* Ensure padding is included in width calculation */
+::ng-deep .mat-form-field-outline {
+  border-radius: 20px !important;
+  background-color: #f5f5f5 !important;
+}
+
+::ng-deep .mat-form-field-outline-thick {
+  border-width: 0 !important;
+}
+
+::ng-deep .mat-input-element {
+  border-radius: 20px !important;
+  padding: 10px 20px !important;
+}
+
+::ng-deep .mat-form-field-wrapper {
+  padding-bottom: 0 !important;
+}
+
+::ng-deep .mat-form-field-infix {
+  border-radius: 20px !important;
 }
 
 .forgot-password {
@@ -66,24 +73,16 @@
   color: #4caf50;
 }
 
-.sign-in-button {
-  background-color: #4caf50;
+button.sign-in-button {
+  background-color: #4caf50 !important;
   color: white;
-  border: none;
-  border-radius: 20px;
-  width: calc(100% - 40px); /* Adjust width to match input fields */
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
+  border-radius: 20px !important;
+  margin-bottom: 1rem;
+  width: 60%;
 }
 
-.sign-in-button:hover {
-  background-color: #45a049;
-}
-
-.error {
-  color: red;
-  margin-top: 10px;
+button.sign-in-button:hover {
+  background-color: #45a049 !important;
 }
 
 @media (max-width: 600px) {

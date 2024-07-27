@@ -28,6 +28,9 @@
         <div class="vertical-line"></div>
         <p class="good-score-text">223 Average tasks per user</p>
       </div>
+      <button class="info-icon">
+        <mat-icon>assignment</mat-icon>
+      </button>
     </article>
     <article class="stat">
       <p>Task Completion</p>
@@ -36,6 +39,9 @@
         <div class="vertical-line-green"></div>
         <p class="good-score-text">Good score</p>
       </div>
+      <button class="info-icon">
+        <mat-icon>grading</mat-icon>
+      </button>
     </article>
     <article class="stat">
       <p>Attendance</p>
@@ -44,6 +50,9 @@
         <div class="vertical-line-orange"></div>
         <p class="good-score-text">Average score</p>
       </div>
+      <button class="info-icon" (click)="onAttendanceClick()">
+        <mat-icon>assignment_ind</mat-icon>
+      </button>
     </article>
     <article class="stat">
       <p>Leaves %</p>
@@ -52,6 +61,9 @@
         <div class="vertical-line-green"></div>
         <p class="good-score-text">Perfect score</p>
       </div>
+      <button class="info-icon" (click)="onLeavesClick()">
+        <mat-icon>login</mat-icon>
+      </button>
     </article>
   </section>
 
@@ -62,40 +74,12 @@
 
     <div class="right-content">
       <app-performance-comparison-chart 
-        [thisYearData]="[80, 90, 70, 100]" 
-        [lastYearData]="[60, 70, 50, 80]" 
-        [labels]="['Q1', 'Q2', 'Q3', 'Q4']">
+        [title]="'Performance Comparison'"
+        [thisYearData]="thisYearData" 
+        [lastYearData]="lastYearData" 
+        [labels]="labels">
       </app-performance-comparison-chart>
-      <app-expense [expenses]="[
-      { name: 'Alena Gouse', role: 'UI Designer - UID1', salary: 60, bonuses: 10, entertainment: 5, claims: 5, image: '../../../../assets/woman.png' },
-      { name: 'Alan Walker', role: 'UI Designer - UID3', salary: 50, bonuses: 15, entertainment: 5, claims: 10, image: '../../../../assets/man.png' },
-      { name: 'Avery Arwood', role: 'UI Designer - UID2', salary: 40, bonuses: 20, entertainment: 10, claims: 5, image: '../../../../assets/woman2.png' }
-    ]"></app-expense>
-    <!--   <section class="expenses">
-        <h2>Expenses</h2>
-        <div class="comparison-header">
-          <div class="legend-item">
-            <div class="dot blue"></div>
-            <span>Salary</span>
-          </div>
-          <div class="legend-item">
-            <div class="dot gray"></div>
-            <span>Bonuses</span>
-          </div>
-          <div class="legend-item">
-            <div class="dot orange"></div>
-            <span>Entertainment</span>
-          </div>
-          <div class="legend-item">
-            <div class="dot green"></div>
-            <span>Claims</span>
-          </div>
-        </div>
-        <div class="graph">
-         
-          <canvas id="expensesGraph" width="400" height="200"></canvas>
-        </div>
-      </section> -->
+      <app-expense [expenses]="employeeExpenses"></app-expense>
     </div>
   </section>
 </div>

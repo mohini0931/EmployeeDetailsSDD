@@ -12,6 +12,7 @@ import { AttendanceComponent } from './components/employee-details/attendance/at
 import { PerformanceComponent } from './components/employee-details/performance/performance.component'; // Create PerformanceComponent
 import { AuthGuard } from './guards/auth.guard';
 import { MyTeamComponent } from './components/custom-components/my-team/my-team.component';
+import { PerformanceComparisonChartComponent } from './components/custom-components/performance-comparison-chart/performance-comparison-chart.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
