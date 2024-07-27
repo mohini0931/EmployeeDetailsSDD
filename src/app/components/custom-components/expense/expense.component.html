@@ -1,0 +1,35 @@
+<div class="expenses">
+  <h2>Expenses</h2>
+  <div class="comparison-header">
+    <div class="legend-item">
+      <div class="dot blue"></div>
+      <span>Salary</span>
+    </div>
+    <div class="legend-item">
+      <div class="dot gray"></div>
+      <span>Bonuses</span>
+    </div>
+    <div class="legend-item">
+      <div class="dot orange"></div>
+      <span>Entertainment</span>
+    </div>
+    <div class="legend-item">
+      <div class="dot green"></div>
+      <span>Claims</span>
+    </div>
+  </div>
+  <div class="expense-entries">
+    <div *ngFor="let expense of expenses; let i = index" class="expense-entry">
+      <div class="employee-info">
+        <img [src]="expense.image" alt="Avatar" class="avatar">
+        <div>
+          <p>{{ expense.name }}</p>
+          <p>{{ expense.role }}</p>
+        </div>
+      </div>
+      <div class="expense-bars">
+        <canvas id="canvas-{{ i }}" class="expense-bar"></canvas>
+      </div>
+    </div>
+  </div>
+</div>

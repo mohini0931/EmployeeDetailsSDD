@@ -42,6 +42,7 @@ import { DashboardComponent } from "./components/employee-details/dashboard/dash
 import { PerformanceCircleComponent } from "./components/custom-components/performance-circle/performance-circle.component";
 import { MyTeamComponent } from './components/custom-components/my-team/my-team.component';
 import { PerformanceComparisonChartComponent } from './components/custom-components/performance-comparison-chart/performance-comparison-chart.component';
+import { ExpenseComponent } from './components/custom-components/expense/expense.component';
 
 @NgModule({
   declarations: [
@@ -60,7 +61,8 @@ import { PerformanceComparisonChartComponent } from './components/custom-compone
     PerformanceComponent,
     PerformanceCircleComponent,
     MyTeamComponent,
-    PerformanceComparisonChartComponent
+    PerformanceComparisonChartComponent,
+    ExpenseComponent
   ],
   imports: [
     BrowserModule,

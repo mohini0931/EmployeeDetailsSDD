@@ -66,7 +66,12 @@
         [lastYearData]="[60, 70, 50, 80]" 
         [labels]="['Q1', 'Q2', 'Q3', 'Q4']">
       </app-performance-comparison-chart>
-      <section class="expenses">
+      <app-expense [expenses]="[
+      { name: 'Alena Gouse', role: 'UI Designer - UID1', salary: 60, bonuses: 10, entertainment: 5, claims: 5, image: '../../../../assets/woman.png' },
+      { name: 'Alan Walker', role: 'UI Designer - UID3', salary: 50, bonuses: 15, entertainment: 5, claims: 10, image: '../../../../assets/man.png' },
+      { name: 'Avery Arwood', role: 'UI Designer - UID2', salary: 40, bonuses: 20, entertainment: 10, claims: 5, image: '../../../../assets/woman2.png' }
+    ]"></app-expense>
+    <!--   <section class="expenses">
         <h2>Expenses</h2>
         <div class="comparison-header">
           <div class="legend-item">
@@ -87,10 +92,10 @@
           </div>
         </div>
         <div class="graph">
-          <!-- Placeholder for graph -->
+         
           <canvas id="expensesGraph" width="400" height="200"></canvas>
         </div>
-      </section>
+      </section> -->
     </div>
   </section>
 </div>
