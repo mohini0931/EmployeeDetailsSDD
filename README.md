@@ -132,3 +132,7 @@ ng test
 
 Contributing:
 Contributions are welcome! Please fork the repository and submit a pull request for review.
+
+Login Creds:
+User 1 :-> sop1/password
+User 2 :-> sop2/password
