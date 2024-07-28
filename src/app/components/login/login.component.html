@@ -5,16 +5,29 @@
     </div>
     <form (ngSubmit)="onSubmit()" class="formClass">
       <div class="input-container">
-        <input [(ngModel)]="username" name="username" placeholder="Username" required class="custom-input">
+        <input
+          [(ngModel)]="username"
+          name="username"
+          placeholder="Username"
+          required
+          class="custom-input"
+        />
       </div>
       <div class="input-container">
-        <input [(ngModel)]="password" name="password" type="password" placeholder="Password" required class="custom-input">
+        <input
+          [(ngModel)]="password"
+          name="password"
+          type="password"
+          placeholder="Password"
+          required
+          class="custom-input"
+        />
       </div>
       <div class="forgot-password">
         <a href="#">Forgot <span>Username</span> / <span>Password</span>?</a>
       </div>
       <button type="submit" class="sign-in-button">Sign In</button>
-      <div *ngIf="loginError" class="error">{{loginError}}</div>
+      <div *ngIf="loginError" class="error">{{ loginError }}</div>
     </form>
   </div>
 </div>

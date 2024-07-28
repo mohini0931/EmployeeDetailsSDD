@@ -21,4 +21,12 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     background-color: #ff9800;
     color: #fff;
   }
+  .mat-label-class {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+    font-size: 20px;
+    font-weight: 400;
+    padding-bottom: 12px;
+  }
   

@@ -4,12 +4,7 @@ import { LoginComponent } from './components/login/login.component';
 import { EmployeeListComponent } from './components/employee-list/employee-list.component';
 import { EmployeeAddComponent } from './components/employee-add-edit/employee-add.component';
 import { EmployeeDeleteComponent } from './components/employee-delete/employee-delete.component';
-import { EmployeeDetailsComponent } from './components/employee-details/employee-details.component';
-import { DashboardComponent } from './components/employee-details/dashboard/dashboard.component';
-import { LeaveComponent } from './components/employee-details/leave/leave.component'; // Create LeaveComponent
-import { AttendanceComponent } from './components/employee-details/attendance/attendance.component'; // Create AttendanceComponent
 import { AuthGuard } from './guards/auth.guard';
-import { MyTeamComponent } from './components/custom-components/my-team/my-team.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -18,15 +13,8 @@ const routes: Routes = [
   { path: 'employee-delete/:id', component: EmployeeDeleteComponent, canActivate: [AuthGuard] },
   {
     path: 'employee-details/:id',
-    component: EmployeeDetailsComponent,
-    canActivate: [AuthGuard],
-    children: [
-      { path: 'dashboard', component: DashboardComponent },
-      { path: 'leave', component: LeaveComponent },
-      { path: 'attendance', component: AttendanceComponent },
-      { path: 'performance', component: MyTeamComponent },
-      { path: '', redirectTo: 'dashboard', pathMatch: 'full' }
-    ]
+    loadChildren: () => import('./modules/employee-details.module').then(m => m.EmployeeDetailsModule),
+    canActivate: [AuthGuard]
   },
   { path: '', redirectTo: '/login', pathMatch: 'full' }
 ];
