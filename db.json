@@ -23,14 +23,14 @@
     },
     {
       "id": "6",
-      "name": "Jane Patil",
+      "name": "Jane Harvey",
       "email": "janedoe@mail.com",
       "address": "123 Main St, Springfield, USA",
       "phone": "(555) 123-4567"
     },
     {
       "id": "9",
-      "name": "Bob Brown",
+      "name": "Bob Patil",
       "email": "bobbrown@mail.com",
       "address": "101 Maple St, Star City, USA",
       "phone": "(555) 456-7890"
@@ -69,6 +69,13 @@
       "email": "m@gmail.com",
       "address": "dso",
       "phone": "47568346583"
+    },
+    {
+      "id": 96120,
+      "name": "Aman",
+      "email": "aman@gmail.com",
+      "address": "dso",
+      "phone": "4653846"
     }
   ]
 }

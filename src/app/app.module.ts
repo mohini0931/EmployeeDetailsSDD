@@ -24,8 +24,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
 import { EmployeeListComponent } from './components/employee-list/employee-list.component';
-import { EmployeeAddComponent } from './components/employee-add/employee-add.component';
-import { EmployeeEditComponent } from './components/employee-edit/employee-edit.component';
+import { EmployeeAddComponent } from './components/employee-add-edit/employee-add.component';
 import { EmployeeDeleteComponent } from './components/employee-delete/employee-delete.component';
 
 import { AuthGuard } from './guards/auth.guard';
@@ -50,7 +49,6 @@ import { ExpenseComponent } from './components/custom-components/expense/expense
     LoginComponent,
     EmployeeListComponent,
     EmployeeAddComponent,
-    EmployeeEditComponent,
     EmployeeDeleteComponent,
     DashboardComponent,
     DeleteConfirmationDialogComponent,

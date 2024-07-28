@@ -1,5 +1,7 @@
-import { Component, OnInit, AfterViewInit } from '@angular/core';
-import { Router , ActivatedRoute} from '@angular/router';
+import { Component, OnInit, AfterViewInit, Input } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
+import { Employee } from '../../../models/employee.model';
+import { EmployeeService } from './../../../services/employee.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -8,8 +10,8 @@ import { Router , ActivatedRoute} from '@angular/router';
 })
 export class DashboardComponent implements OnInit, AfterViewInit {
   currentDate: Date = new Date();
-  employee = { name: 'Mohini' };
   employeeId: string;
+  employee: Employee | null = null;
 
   employeeExpenses = [
     {
@@ -44,22 +46,27 @@ export class DashboardComponent implements OnInit, AfterViewInit {
   lastYearData = [60, 70, 50, 80];
   labels = ['Q1', 'Q2', 'Q3', 'Q4'];
 
-  constructor(private router: Router, private route: ActivatedRoute){
+  constructor(private router: Router, private route: ActivatedRoute, public employeeService: EmployeeService) {
     this.employeeId = this.route.snapshot.paramMap.get('id') || ''; // Retrieve the employee ID from the route
+    
   }
 
   ngOnInit(): void {
     setInterval(() => {
       this.currentDate = new Date();
     }, 1000);
+    this.employeeService.employee$.subscribe(employee => {
+      this.employee = employee;
+      console.log('from dashboard component=' + this.employee);
+    });
   }
   ngAfterViewInit(): void {
     this.drawCircle(84.34); // Example fill percentage
   }
-  onAttendanceClick(){
+  onAttendanceClick() {
     this.router.navigate([`/employee-details`, this.employeeId, 'attendance']);
   }
-  onLeavesClick(){
+  onLeavesClick() {
     this.router.navigate([`/employee-details`, this.employeeId, 'leave']);
   }
   drawCircle(percentage: number): void {
