@@ -188,11 +188,13 @@ export class EmployeeListComponent implements OnInit, AfterViewInit {
     return this.selection.selected.length > 0;
   }
 
-  // Method to toggle the selection of all rows
   masterToggle() {
-    this.isAllSelected() ?
-      this.selection.clear() :
+    // Toggle the selection state for all rows
+    if (this.isAllSelected()) {
+      this.selection.clear();
+    } else {
       this.dataSource.data.forEach(row => this.selection.select(row));
+    }
   }
 
   // Method to get the label for the checkbox

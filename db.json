@@ -30,7 +30,7 @@
     },
     {
       "id": "5",
-      "name": "Bob Patil",
+      "name": "Bob Luise",
       "email": "bobbrown@mail.com",
       "address": "101 Maple St, Star City, USA",
       "phone": "(555) 456-7890"
@@ -43,606 +43,662 @@
       "phone": "(555) 567-8901"
     },
     {
-      "id": "72255",
-      "name": "Mohini",
-      "email": "email@rnnail.com",
-      "address": "dso",
-      "phone": "8458347583"
-    },
-    {
-      "id": 5885,
+      "id": "5885",
       "name": "Mohini Narwade",
       "email": "m@gmail.com",
       "address": "dso",
       "phone": "9975800408"
     },
     {
-      "id": 37754,
+      "id": "37754",
       "name": "Mohini Patil",
       "email": "mo@gmail.com",
       "address": "dso",
       "phone": "843847837458"
     },
     {
-      "id": 48875,
-      "name": "Mohini",
-      "email": "m@gmail.com",
-      "address": "dso",
-      "phone": "47568346583"
-    },
-    {
-      "id": 96120,
-      "name": "Aman",
+      "id": "96120",
+      "name": "Aman Lodha Patil",
       "email": "aman@gmail.com",
       "address": "dso",
       "phone": "4653846"
     }
   ],
-  
-    "employeeDetails": [
-      {
-        "id": 1,
-        "dashboard": {
-          "performance": {
-            "score": "202/240",
-            "percentage": 84.34,
-            "scoreDesc": "Good Score"
-          },
-          "taskAssigned": {
-            "total": 189,
-            "averageTasks": 223
-          },
-          "taskCompletion": {
-            "percentage": 98.56,
-            "scoreDesc": "Good Score"
-          },
-          "attendance": {
-            "percentage": 89.87,
-            "scoreDesc": "Average Score"
-          },
-          "leaves": {
-            "percentage": 100,
-            "scoreDesc": "Perfect Score"
-          }
+  "employeeDetails": [
+    {
+      "id": "1",
+      "dashboard": {
+        "performance": {
+          "score": "202/240",
+          "percentage": 84.34,
+          "scoreDesc": "Good Score"
         },
-        "team": [
-          {
-            "id": 1,
-            "name": "Alena Gouse",
-            "role": "UI Designer",
-            "score": 201,
-            "thisMonth": 83.45,
-            "lastMonth": 82.0,
-            "avatar": "../../../../assets/woman.png",
-            "performanceCategory": "perfect"
-          },
-          {
-            "id": 2,
-            "name": "Alan Walker",
-            "role": "UI Designer",
-            "score": 223,
-            "thisMonth": 97.98,
-            "lastMonth": 61.0,
-            "avatar": "../../../../assets/man.png",
-            "performanceCategory": "good"
-          },
-          {
-            "id": 3,
-            "name": "Miracle Vetrovs",
-            "role": "UI Designer",
-            "score": 217,
-            "thisMonth": 91.65,
-            "lastMonth": 87.5,
-            "avatar": "../../../../assets/man2.png",
-            "performanceCategory": "good"
-          },
-          {
-            "id": 4,
-            "name": "Avery Arwood",
-            "role": "UI Designer",
-            "score": 187,
-            "thisMonth": 72.67,
-            "lastMonth": 81.33,
-            "avatar": "../../../../assets/woman2.png",
-            "performanceCategory": "average"
-          },
-          {
-            "id": 5,
-            "name": "John Erkwood",
-            "role": "UI Designer",
-            "score": 207,
-            "thisMonth": 88.98,
-            "lastMonth": 77.65,
-            "avatar": "../../../../assets/profile.png",
-            "performanceCategory": "good"
-          }
+        "taskAssigned": {
+          "total": 189,
+          "averageTasks": 223
+        },
+        "taskCompletion": {
+          "percentage": 98.56,
+          "scoreDesc": "Good Score"
+        },
+        "attendance": {
+          "percentage": 89.87,
+          "scoreDesc": "Average Score"
+        },
+        "leaves": {
+          "percentage": 100,
+          "scoreDesc": "Perfect Score"
+        }
+      },
+      "team": [
+        {
+          "id": 1,
+          "name": "Alena Gouse",
+          "role": "UI Designer",
+          "score": 201,
+          "thisMonth": 83.45,
+          "lastMonth": 82,
+          "avatar": "../../../../assets/woman.png",
+          "performanceCategory": "perfect"
+        },
+        {
+          "id": 2,
+          "name": "Alan Walker",
+          "role": "UI Designer",
+          "score": 223,
+          "thisMonth": 97.98,
+          "lastMonth": 61,
+          "avatar": "../../../../assets/man.png",
+          "performanceCategory": "good"
+        },
+        {
+          "id": 3,
+          "name": "Miracle Vetrovs",
+          "role": "UI Designer",
+          "score": 217,
+          "thisMonth": 91.65,
+          "lastMonth": 87.5,
+          "avatar": "../../../../assets/man2.png",
+          "performanceCategory": "good"
+        },
+        {
+          "id": 4,
+          "name": "Avery Arwood",
+          "role": "UI Designer",
+          "score": 187,
+          "thisMonth": 72.67,
+          "lastMonth": 81.33,
+          "avatar": "../../../../assets/woman2.png",
+          "performanceCategory": "average"
+        },
+        {
+          "id": 5,
+          "name": "John Erkwood",
+          "role": "UI Designer",
+          "score": 207,
+          "thisMonth": 88.98,
+          "lastMonth": 77.65,
+          "avatar": "../../../../assets/profile.png",
+          "performanceCategory": "good"
+        }
+      ],
+      "performanceComparison": {
+        "thisYear": [
+          80,
+          90,
+          70,
+          100
         ],
-        "performanceComparison": {
-          "thisYear": [80, 90, 70, 100],
-          "lastYear": [60, 70, 50, 80],
-          "labels": ["Q1", "Q2", "Q3", "Q4"]
-        },
-        "expenses": [
-          {
-            "name": "Alena Gouse",
-            "role": "UI Designer - UID1",
-            "salary": 60,
-            "bonuses": 10,
-            "entertainment": 5,
-            "claims": 5,
-            "image": "../../../../assets/woman.png"
-          },
-          {
-            "name": "Alan Walker",
-            "role": "UI Designer - UID3",
-            "salary": 50,
-            "bonuses": 15,
-            "entertainment": 5,
-            "claims": 10,
-            "image": "../../../../assets/man.png"
-          },
-          {
-            "name": "Avery Arwood",
-            "role": "UI Designer - UID2",
-            "salary": 40,
-            "bonuses": 20,
-            "entertainment": 10,
-            "claims": 5,
-            "image": "../../../../assets/woman2.png"
-          }
+        "lastYear": [
+          60,
+          70,
+          50,
+          80
+        ],
+        "labels": [
+          "Q1",
+          "Q2",
+          "Q3",
+          "Q4"
         ]
       },
-      {
-        "id": 2,
-        "dashboard": {
-          "performance": {
-            "score": "180/240",
-            "percentage": 70,
-            "scoreDesc": "Average Score"
-          },
-          "taskAssigned": {
-            "total": 150,
-            "averageTasks": 200
-          },
-          "taskCompletion": {
-            "percentage": 90,
-            "scoreDesc": "Good Score"
-          },
-          "attendance": {
-            "percentage": 80,
-            "scoreDesc": "Good Score"
-          },
-          "leaves": {
-            "percentage": 70,
-            "scoreDesc": "Perfect Score"
-          }
+      "expenses": [
+        {
+          "name": "Alena Gouse",
+          "role": "UI Designer - UID1",
+          "salary": 60,
+          "bonuses": 10,
+          "entertainment": 5,
+          "claims": 5,
+          "image": "../../../../assets/woman.png"
         },
-        "team": [
-          {
-            "id": 1,
-            "name": "Mitali",
-            "role": "UI Designer",
-            "score": 201,
-            "thisMonth": 83.45,
-            "lastMonth": 82.0,
-            "avatar": "../../../../assets/woman.png",
-            "performanceCategory": "perfect"
-          },
-          {
-            "id": 2,
-            "name": "Aman Lodha",
-            "role": "UI Designer",
-            "score": 223,
-            "thisMonth": 97.98,
-            "lastMonth": 61.0,
-            "avatar": "../../../../assets/man.png",
-            "performanceCategory": "good"
-          },
-          {
-            "id": 3,
-            "name": "Mohini Narwade",
-            "role": "UI Designer",
-            "score": 217,
-            "thisMonth": 91.65,
-            "lastMonth": 87.5,
-            "avatar": "../../../../assets/man2.png",
-            "performanceCategory": "good"
-          },
-          {
-            "id": 4,
-            "name": "Avina Bor",
-            "role": "UI Designer",
-            "score": 187,
-            "thisMonth": 72.67,
-            "lastMonth": 81.33,
-            "avatar": "../../../../assets/woman2.png",
-            "performanceCategory": "average"
-          },
-          {
-            "id": 5,
-            "name": "Jacob",
-            "role": "UI Designer",
-            "score": 207,
-            "thisMonth": 88.98,
-            "lastMonth": 77.65,
-            "avatar": "../../../../assets/profile.png",
-            "performanceCategory": "good"
-          }
+        {
+          "name": "Alan Walker",
+          "role": "UI Designer - UID3",
+          "salary": 50,
+          "bonuses": 15,
+          "entertainment": 5,
+          "claims": 10,
+          "image": "../../../../assets/man.png"
+        },
+        {
+          "name": "Avery Arwood",
+          "role": "UI Designer - UID2",
+          "salary": 40,
+          "bonuses": 20,
+          "entertainment": 10,
+          "claims": 5,
+          "image": "../../../../assets/woman2.png"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "dashboard": {
+        "performance": {
+          "score": "180/240",
+          "percentage": 70,
+          "scoreDesc": "Average Score"
+        },
+        "taskAssigned": {
+          "total": 150,
+          "averageTasks": 200
+        },
+        "taskCompletion": {
+          "percentage": 90,
+          "scoreDesc": "Good Score"
+        },
+        "attendance": {
+          "percentage": 80,
+          "scoreDesc": "Good Score"
+        },
+        "leaves": {
+          "percentage": 70,
+          "scoreDesc": "Perfect Score"
+        }
+      },
+      "team": [
+        {
+          "id": 1,
+          "name": "Mitali",
+          "role": "UI Designer",
+          "score": 201,
+          "thisMonth": 83.45,
+          "lastMonth": 82,
+          "avatar": "../../../../assets/woman.png",
+          "performanceCategory": "perfect"
+        },
+        {
+          "id": 2,
+          "name": "Aman Lodha",
+          "role": "UI Designer",
+          "score": 223,
+          "thisMonth": 97.98,
+          "lastMonth": 61,
+          "avatar": "../../../../assets/man.png",
+          "performanceCategory": "good"
+        },
+        {
+          "id": 3,
+          "name": "Mohini Narwade",
+          "role": "UI Designer",
+          "score": 217,
+          "thisMonth": 91.65,
+          "lastMonth": 87.5,
+          "avatar": "../../../../assets/man2.png",
+          "performanceCategory": "good"
+        },
+        {
+          "id": 4,
+          "name": "Avina Bor",
+          "role": "UI Designer",
+          "score": 187,
+          "thisMonth": 72.67,
+          "lastMonth": 81.33,
+          "avatar": "../../../../assets/woman2.png",
+          "performanceCategory": "average"
+        },
+        {
+          "id": 5,
+          "name": "Jacob",
+          "role": "UI Designer",
+          "score": 207,
+          "thisMonth": 88.98,
+          "lastMonth": 77.65,
+          "avatar": "../../../../assets/profile.png",
+          "performanceCategory": "good"
+        }
+      ],
+      "performanceComparison": {
+        "thisYear": [
+          50,
+          60,
+          70,
+          90
         ],
-        "performanceComparison": {
-          "thisYear": [50, 60, 70, 90],
-          "lastYear": [60, 70, 50, 80],
-          "labels": ["Q1", "Q2", "Q3", "Q4"]
-        },
-        "expenses": [
-          {
-            "name": "Alena Gouse",
-            "role": "UI Designer - UID1",
-            "salary": 60,
-            "bonuses": 20,
-            "entertainment": 10,
-            "claims": 5,
-            "image": "../../../../assets/woman.png"
-          },
-          {
-            "name": "Alan Walker",
-            "role": "UI Designer - UID3",
-            "salary": 70,
-            "bonuses": 10,
-            "entertainment": 5,
-            "claims": 10,
-            "image": "../../../../assets/man.png"
-          },
-          {
-            "name": "Avery Arwood",
-            "role": "UI Designer - UID2",
-            "salary": 80,
-            "bonuses": 20,
-            "entertainment": 10,
-            "claims": 5,
-            "image": "../../../../assets/woman2.png"
-          }
+        "lastYear": [
+          60,
+          70,
+          50,
+          80
+        ],
+        "labels": [
+          "Q1",
+          "Q2",
+          "Q3",
+          "Q4"
         ]
       },
-      {
-        "id": 3,
-        "dashboard": {
-          "performance": {
-            "score": "190/240",
-            "percentage": 75,
-            "scoreDesc": "Good Score"
-          },
-          "taskAssigned": {
-            "total": 160,
-            "averageTasks": 210
-          },
-          "taskCompletion": {
-            "percentage": 92,
-            "scoreDesc": "Perfect Score"
-          },
-          "attendance": {
-            "percentage": 85,
-            "scoreDesc": "Good Score"
-          },
-          "leaves": {
-            "percentage": 75,
-            "scoreDesc": "Good Score"
-          }
+      "expenses": [
+        {
+          "name": "Alena Gouse",
+          "role": "UI Designer - UID1",
+          "salary": 60,
+          "bonuses": 20,
+          "entertainment": 10,
+          "claims": 5,
+          "image": "../../../../assets/woman.png"
         },
-        "team": [
-          {
-            "id": 1,
-            "name": "Nina Patel",
-            "role": "UI Designer",
-            "score": 201,
-            "thisMonth": 83.45,
-            "lastMonth": 82.0,
-            "avatar": "../../../../assets/woman.png",
-            "performanceCategory": "perfect"
-          },
-          {
-            "id": 2,
-            "name": "Chris Johnson",
-            "role": "UI Designer",
-            "score": 223,
-            "thisMonth": 97.98,
-            "lastMonth": 61.0,
-            "avatar": "../../../../assets/man.png",
-            "performanceCategory": "good"
-          },
-          {
-            "id": 3,
-            "name": "Sophia Lin",
-            "role": "UI Designer",
-            "score": 217,
-            "thisMonth": 91.65,
-            "lastMonth": 87.5,
-            "avatar": "../../../../assets/man2.png",
-            "performanceCategory": "good"
-          },
-          {
-            "id": 4,
-            "name": "David Lee",
-            "role": "UI Designer",
-            "score": 187,
-            "thisMonth": 72.67,
-            "lastMonth": 81.33,
-            "avatar": "../../../../assets/woman2.png",
-            "performanceCategory": "average"
-          },
-          {
-            "id": 5,
-            "name": "Grace Kim",
-            "role": "UI Designer",
-            "score": 207,
-            "thisMonth": 88.98,
-            "lastMonth": 77.65,
-            "avatar": "../../../../assets/profile.png",
-            "performanceCategory": "good"
-          }
+        {
+          "name": "Alan Walker",
+          "role": "UI Designer - UID3",
+          "salary": 70,
+          "bonuses": 10,
+          "entertainment": 5,
+          "claims": 10,
+          "image": "../../../../assets/man.png"
+        },
+        {
+          "name": "Avery Arwood",
+          "role": "UI Designer - UID2",
+          "salary": 80,
+          "bonuses": 20,
+          "entertainment": 10,
+          "claims": 5,
+          "image": "../../../../assets/woman2.png"
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "dashboard": {
+        "performance": {
+          "score": "190/240",
+          "percentage": 75,
+          "scoreDesc": "Good Score"
+        },
+        "taskAssigned": {
+          "total": 160,
+          "averageTasks": 210
+        },
+        "taskCompletion": {
+          "percentage": 92,
+          "scoreDesc": "Perfect Score"
+        },
+        "attendance": {
+          "percentage": 85,
+          "scoreDesc": "Good Score"
+        },
+        "leaves": {
+          "percentage": 75,
+          "scoreDesc": "Good Score"
+        }
+      },
+      "team": [
+        {
+          "id": 1,
+          "name": "Nina Patel",
+          "role": "UI Designer",
+          "score": 201,
+          "thisMonth": 83.45,
+          "lastMonth": 82,
+          "avatar": "../../../../assets/woman.png",
+          "performanceCategory": "perfect"
+        },
+        {
+          "id": 2,
+          "name": "Chris Johnson",
+          "role": "UI Designer",
+          "score": 223,
+          "thisMonth": 97.98,
+          "lastMonth": 61,
+          "avatar": "../../../../assets/man.png",
+          "performanceCategory": "good"
+        },
+        {
+          "id": 3,
+          "name": "Sophia Lin",
+          "role": "UI Designer",
+          "score": 217,
+          "thisMonth": 91.65,
+          "lastMonth": 87.5,
+          "avatar": "../../../../assets/man2.png",
+          "performanceCategory": "good"
+        },
+        {
+          "id": 4,
+          "name": "David Lee",
+          "role": "UI Designer",
+          "score": 187,
+          "thisMonth": 72.67,
+          "lastMonth": 81.33,
+          "avatar": "../../../../assets/woman2.png",
+          "performanceCategory": "average"
+        },
+        {
+          "id": 5,
+          "name": "Grace Kim",
+          "role": "UI Designer",
+          "score": 207,
+          "thisMonth": 88.98,
+          "lastMonth": 77.65,
+          "avatar": "../../../../assets/profile.png",
+          "performanceCategory": "good"
+        }
+      ],
+      "performanceComparison": {
+        "thisYear": [
+          55,
+          65,
+          75,
+          95
         ],
-        "performanceComparison": {
-          "thisYear": [55, 65, 75, 95],
-          "lastYear": [65, 75, 55, 85],
-          "labels": ["Q1", "Q2", "Q3", "Q4"]
-        },
-        "expenses": [
-          {
-            "name": "Nina Patel",
-            "role": "UI Designer - UID1",
-            "salary": 60,
-            "bonuses": 25,
-            "entertainment": 10,
-            "claims": 5,
-            "image": "../../../../assets/woman.png"
-          },
-          {
-            "name": "Chris Johnson",
-            "role": "UI Designer - UID3",
-            "salary": 75,
-            "bonuses": 10,
-            "entertainment": 7,
-            "claims": 10,
-            "image": "../../../../assets/man.png"
-          },
-          {
-            "name": "David Lee",
-            "role": "UI Designer - UID2",
-            "salary": 85,
-            "bonuses": 20,
-            "entertainment": 12,
-            "claims": 5,
-            "image": "../../../../assets/woman2.png"
-          }
+        "lastYear": [
+          65,
+          75,
+          55,
+          85
+        ],
+        "labels": [
+          "Q1",
+          "Q2",
+          "Q3",
+          "Q4"
         ]
       },
-      {
-        "id": 4,
-        "dashboard": {
-          "performance": {
-            "score": "200/240",
-            "percentage": 80,
-            "scoreDesc": "Good Score"
-          },
-          "taskAssigned": {
-            "total": 180,
-            "averageTasks": 220
-          },
-          "taskCompletion": {
-            "percentage": 95,
-            "scoreDesc": "Perfect Score"
-          },
-          "attendance": {
-            "percentage": 88,
-            "scoreDesc": "Average Score"
-          },
-          "leaves": {
-            "percentage": 80,
-            "scoreDesc": "Good Score"
-          }
+      "expenses": [
+        {
+          "name": "Nina Patel",
+          "role": "UI Designer - UID1",
+          "salary": 60,
+          "bonuses": 25,
+          "entertainment": 10,
+          "claims": 5,
+          "image": "../../../../assets/woman.png"
         },
-        "team": [
-          {
-            "id": 1,
-            "name": "Jasmine Carter",
-            "role": "UI Designer",
-            "score": 201,
-            "thisMonth": 83.45,
-            "lastMonth": 82.0,
-            "avatar": "../../../../assets/woman.png",
-            "performanceCategory": "perfect"
-          },
-          {
-            "id": 2,
-            "name": "Ethan Murphy",
-            "role": "UI Designer",
-            "score": 223,
-            "thisMonth": 97.98,
-            "lastMonth": 61.0,
-            "avatar": "../../../../assets/man.png",
-            "performanceCategory": "good"
-          },
-          {
-            "id": 3,
-            "name": "Isabella Brown",
-            "role": "UI Designer",
-            "score": 217,
-            "thisMonth": 91.65,
-            "lastMonth": 87.5,
-            "avatar": "../../../../assets/man2.png",
-            "performanceCategory": "good"
-          },
-          {
-            "id": 4,
-            "name": "Liam Davis",
-            "role": "UI Designer",
-            "score": 187,
-            "thisMonth": 72.67,
-            "lastMonth": 81.33,
-            "avatar": "../../../../assets/woman2.png",
-            "performanceCategory": "average"
-          },
-          {
-            "id": 5,
-            "name": "Olivia Wilson",
-            "role": "UI Designer",
-            "score": 207,
-            "thisMonth": 88.98,
-            "lastMonth": 77.65,
-            "avatar": "../../../../assets/profile.png",
-            "performanceCategory": "good"
-          }
+        {
+          "name": "Chris Johnson",
+          "role": "UI Designer - UID3",
+          "salary": 75,
+          "bonuses": 10,
+          "entertainment": 7,
+          "claims": 10,
+          "image": "../../../../assets/man.png"
+        },
+        {
+          "name": "David Lee",
+          "role": "UI Designer - UID2",
+          "salary": 85,
+          "bonuses": 20,
+          "entertainment": 12,
+          "claims": 5,
+          "image": "../../../../assets/woman2.png"
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "dashboard": {
+        "performance": {
+          "score": "200/240",
+          "percentage": 80,
+          "scoreDesc": "Good Score"
+        },
+        "taskAssigned": {
+          "total": 180,
+          "averageTasks": 220
+        },
+        "taskCompletion": {
+          "percentage": 95,
+          "scoreDesc": "Perfect Score"
+        },
+        "attendance": {
+          "percentage": 88,
+          "scoreDesc": "Average Score"
+        },
+        "leaves": {
+          "percentage": 80,
+          "scoreDesc": "Good Score"
+        }
+      },
+      "team": [
+        {
+          "id": 1,
+          "name": "Jasmine Carter",
+          "role": "UI Designer",
+          "score": 201,
+          "thisMonth": 83.45,
+          "lastMonth": 82,
+          "avatar": "../../../../assets/woman.png",
+          "performanceCategory": "perfect"
+        },
+        {
+          "id": 2,
+          "name": "Ethan Murphy",
+          "role": "UI Designer",
+          "score": 223,
+          "thisMonth": 97.98,
+          "lastMonth": 61,
+          "avatar": "../../../../assets/man.png",
+          "performanceCategory": "good"
+        },
+        {
+          "id": 3,
+          "name": "Isabella Brown",
+          "role": "UI Designer",
+          "score": 217,
+          "thisMonth": 91.65,
+          "lastMonth": 87.5,
+          "avatar": "../../../../assets/man2.png",
+          "performanceCategory": "good"
+        },
+        {
+          "id": 4,
+          "name": "Liam Davis",
+          "role": "UI Designer",
+          "score": 187,
+          "thisMonth": 72.67,
+          "lastMonth": 81.33,
+          "avatar": "../../../../assets/woman2.png",
+          "performanceCategory": "average"
+        },
+        {
+          "id": 5,
+          "name": "Olivia Wilson",
+          "role": "UI Designer",
+          "score": 207,
+          "thisMonth": 88.98,
+          "lastMonth": 77.65,
+          "avatar": "../../../../assets/profile.png",
+          "performanceCategory": "good"
+        }
+      ],
+      "performanceComparison": {
+        "thisYear": [
+          60,
+          70,
+          80,
+          100
         ],
-        "performanceComparison": {
-          "thisYear": [60, 70, 80, 100],
-          "lastYear": [70, 80, 60, 90],
-          "labels": ["Q1", "Q2", "Q3", "Q4"]
-        },
-        "expenses": [
-          {
-            "name": "Jasmine Carter",
-            "role": "UI Designer - UID1",
-            "salary": 60,
-            "bonuses": 20,
-            "entertainment": 8,
-            "claims": 5,
-            "image": "../../../../assets/woman.png"
-          },
-          {
-            "name": "Ethan Murphy",
-            "role": "UI Designer - UID3",
-            "salary": 70,
-            "bonuses": 15,
-            "entertainment": 5,
-            "claims": 10,
-            "image": "../../../../assets/man.png"
-          },
-          {
-            "name": "Liam Davis",
-            "role": "UI Designer - UID2",
-            "salary": 80,
-            "bonuses": 25,
-            "entertainment": 12,
-            "claims": 5,
-            "image": "../../../../assets/woman2.png"
-          }
+        "lastYear": [
+          70,
+          80,
+          60,
+          90
+        ],
+        "labels": [
+          "Q1",
+          "Q2",
+          "Q3",
+          "Q4"
         ]
       },
-      {
-        "id": 5,
-        "dashboard": {
-          "performance": {
-            "score": "210/240",
-            "percentage": 87.5,
-            "scoreDesc": "Good Score"
-          },
-          "taskAssigned": {
-            "total": 200,
-            "averageTasks": 230
-          },
-          "taskCompletion": {
-            "percentage": 98,
-            "scoreDesc": "Perfect Score"
-          },
-          "attendance": {
-            "percentage": 90,
-            "scoreDesc": "Good Score"
-          },
-          "leaves": {
-            "percentage": 85,
-            "scoreDesc": "Good Score"
-          }
+      "expenses": [
+        {
+          "name": "Jasmine Carter",
+          "role": "UI Designer - UID1",
+          "salary": 60,
+          "bonuses": 20,
+          "entertainment": 8,
+          "claims": 5,
+          "image": "../../../../assets/woman.png"
         },
-        "team": [
-          {
-            "id": 1,
-            "name": "Sam Green",
-            "role": "UI Designer",
-            "score": 201,
-            "thisMonth": 83.45,
-            "lastMonth": 82.0,
-            "avatar": "../../../../assets/woman.png",
-            "performanceCategory": "perfect"
-          },
-          {
-            "id": 2,
-            "name": "Nancy White",
-            "role": "UI Designer",
-            "score": 223,
-            "thisMonth": 97.98,
-            "lastMonth": 61.0,
-            "avatar": "../../../../assets/man.png",
-            "performanceCategory": "good"
-          },
-          {
-            "id": 3,
-            "name": "David Black",
-            "role": "UI Designer",
-            "score": 217,
-            "thisMonth": 91.65,
-            "lastMonth": 87.5,
-            "avatar": "../../../../assets/man2.png",
-            "performanceCategory": "good"
-          },
-          {
-            "id": 4,
-            "name": "Emily Purple",
-            "role": "UI Designer",
-            "score": 187,
-            "thisMonth": 72.67,
-            "lastMonth": 81.33,
-            "avatar": "../../../../assets/woman2.png",
-            "performanceCategory": "average"
-          },
-          {
-            "id": 5,
-            "name": "Paul Blue",
-            "role": "UI Designer",
-            "score": 207,
-            "thisMonth": 88.98,
-            "lastMonth": 77.65,
-            "avatar": "../../../../assets/profile.png",
-            "performanceCategory": "good"
-          }
+        {
+          "name": "Ethan Murphy",
+          "role": "UI Designer - UID3",
+          "salary": 70,
+          "bonuses": 15,
+          "entertainment": 5,
+          "claims": 10,
+          "image": "../../../../assets/man.png"
+        },
+        {
+          "name": "Liam Davis",
+          "role": "UI Designer - UID2",
+          "salary": 80,
+          "bonuses": 25,
+          "entertainment": 12,
+          "claims": 5,
+          "image": "../../../../assets/woman2.png"
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "dashboard": {
+        "performance": {
+          "score": "210/240",
+          "percentage": 87.5,
+          "scoreDesc": "Good Score"
+        },
+        "taskAssigned": {
+          "total": 200,
+          "averageTasks": 230
+        },
+        "taskCompletion": {
+          "percentage": 98,
+          "scoreDesc": "Perfect Score"
+        },
+        "attendance": {
+          "percentage": 90,
+          "scoreDesc": "Good Score"
+        },
+        "leaves": {
+          "percentage": 85,
+          "scoreDesc": "Good Score"
+        }
+      },
+      "team": [
+        {
+          "id": 1,
+          "name": "Sam Green",
+          "role": "UI Designer",
+          "score": 201,
+          "thisMonth": 83.45,
+          "lastMonth": 82,
+          "avatar": "../../../../assets/woman.png",
+          "performanceCategory": "perfect"
+        },
+        {
+          "id": 2,
+          "name": "Nancy White",
+          "role": "UI Designer",
+          "score": 223,
+          "thisMonth": 97.98,
+          "lastMonth": 61,
+          "avatar": "../../../../assets/man.png",
+          "performanceCategory": "good"
+        },
+        {
+          "id": 3,
+          "name": "David Black",
+          "role": "UI Designer",
+          "score": 217,
+          "thisMonth": 91.65,
+          "lastMonth": 87.5,
+          "avatar": "../../../../assets/man2.png",
+          "performanceCategory": "good"
+        },
+        {
+          "id": 4,
+          "name": "Emily Purple",
+          "role": "UI Designer",
+          "score": 187,
+          "thisMonth": 72.67,
+          "lastMonth": 81.33,
+          "avatar": "../../../../assets/woman2.png",
+          "performanceCategory": "average"
+        },
+        {
+          "id": 5,
+          "name": "Paul Blue",
+          "role": "UI Designer",
+          "score": 207,
+          "thisMonth": 88.98,
+          "lastMonth": 77.65,
+          "avatar": "../../../../assets/profile.png",
+          "performanceCategory": "good"
+        }
+      ],
+      "performanceComparison": {
+        "thisYear": [
+          70,
+          80,
+          90,
+          110
         ],
-        "performanceComparison": {
-          "thisYear": [70, 80, 90, 110],
-          "lastYear": [80, 90, 70, 100],
-          "labels": ["Q1", "Q2", "Q3", "Q4"]
-        },
-        "expenses": [
-          {
-            "name": "Sam Green",
-            "role": "UI Designer - UID1",
-            "salary": 60,
-            "bonuses": 20,
-            "entertainment": 8,
-            "claims": 5,
-            "image": "../../../../assets/woman.png"
-          },
-          {
-            "name": "Nancy White",
-            "role": "UI Designer - UID3",
-            "salary": 70,
-            "bonuses": 15,
-            "entertainment": 5,
-            "claims": 10,
-            "image": "../../../../assets/man.png"
-          },
-          {
-            "name": "Emily Purple",
-            "role": "UI Designer - UID2",
-            "salary": 80,
-            "bonuses": 25,
-            "entertainment": 12,
-            "claims": 5,
-            "image": "../../../../assets/woman2.png"
-          }
+        "lastYear": [
+          80,
+          90,
+          70,
+          100
+        ],
+        "labels": [
+          "Q1",
+          "Q2",
+          "Q3",
+          "Q4"
         ]
-      }
-    ]
-  
-  
-
-
+      },
+      "expenses": [
+        {
+          "name": "Sam Green",
+          "role": "UI Designer - UID1",
+          "salary": 60,
+          "bonuses": 20,
+          "entertainment": 8,
+          "claims": 5,
+          "image": "../../../../assets/woman.png"
+        },
+        {
+          "name": "Nancy White",
+          "role": "UI Designer - UID3",
+          "salary": 70,
+          "bonuses": 15,
+          "entertainment": 5,
+          "claims": 10,
+          "image": "../../../../assets/man.png"
+        },
+        {
+          "name": "Emily Purple",
+          "role": "UI Designer - UID2",
+          "salary": 80,
+          "bonuses": 25,
+          "entertainment": 12,
+          "claims": 5,
+          "image": "../../../../assets/woman2.png"
+        }
+      ]
+    }
+  ]
 }
