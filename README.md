@@ -12,6 +12,7 @@ Real-time Data Updates: Automatically updates the employee list upon changes.
 Notifications: Success and error messages displayed using snack bars.
 Test Cases: Comprehensive unit tests to ensure application stability [Written and executed for login and employee-list component]
 Mock API: Uses json-server to perform CRUD operations and to get Employee Details.
+Pagination for the Table is provided.
 
 Technologies Used
 Angular 17: Framework for building the application.
