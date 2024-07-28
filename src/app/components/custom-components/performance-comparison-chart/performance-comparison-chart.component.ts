@@ -13,5 +13,13 @@ export class PerformanceComparisonChartComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void { }
+  ngOnInit(): void { 
+    if(this.thisYearData.length === 0)
+      {
+        this.thisYearData = [80, 90, 70, 100];
+        this.lastYearData = [60, 70, 50, 80];
+        this.labels = ["Q1", "Q2", "Q3", "Q4"];
+        this.title = 'Performance Comparison';
+      }
+  }
 }

@@ -31,65 +31,19 @@
       <div class="team-cell">This Month</div>
       <div class="team-cell">Last Month</div>
     </div>
-    <div class="team-row">
-      <div class="team-cell">
-        <img src="../../../../assets/woman.png" alt="Avatar" class="avatar">
-        Alena Gouse
+    <div *ngFor="let teamdata of teamDetails; let i = index">
+      <div class="team-row">
+        <div class="team-cell">
+          <img [src]="teamdata?.avatar" alt="Avatar" class="avatar" />
+          {{ teamdata?.name }}
+        </div>
+        <div class="team-cell">{{ teamdata?.score }}</div>
+        <div class="team-cell">
+          <span class="dot perfect-score"></span>
+          {{ teamdata?.thisMonth }}%
+        </div>
+        <div class="team-cell">{{ teamdata?.lastMonth }}%</div>
       </div>
-      <div class="team-cell">201</div>
-      <div class="team-cell">
-        <span class="dot perfect-score"></span>
-        83.45%
-      </div>
-      <div class="team-cell">82.00%</div>
-    </div>
-    <div class="team-row">
-      <div class="team-cell">
-        <img src="../../../../assets/man.png" alt="Avatar" class="avatar">
-        Alan Walker
-      </div>
-      <div class="team-cell">223</div>
-      <div class="team-cell">
-        <span class="dot good-score"></span>
-        97.98%
-      </div>
-      <div class="team-cell">61.00%</div>
-    </div>
-    <div class="team-row">
-      <div class="team-cell">
-        <img src="../../../../assets/man2.png" alt="Avatar" class="avatar">
-        Miracle Vetrovs
-      </div>
-      <div class="team-cell">217</div>
-      <div class="team-cell">
-        <span class="dot good-score"></span>
-        91.65%
-      </div>
-      <div class="team-cell">87.50%</div>
-    </div>
-    <div class="team-row">
-      <div class="team-cell">
-        <img src="../../../../assets/woman2.png" alt="Avatar" class="avatar">
-        Avery Arwood
-      </div>
-      <div class="team-cell">187</div>
-      <div class="team-cell">
-        <span class="dot average-score"></span>
-        72.67%
-      </div>
-      <div class="team-cell">81.33%</div>
-    </div>
-    <div class="team-row">
-      <div class="team-cell">
-        <img src="../../../../assets/profile.png" alt="Avatar" class="avatar">
-        John Erkwood
-      </div>
-      <div class="team-cell">207</div>
-      <div class="team-cell">
-        <span class="dot good-score"></span>
-        88.98%
-      </div>
-      <div class="team-cell">77.65%</div>
     </div>
   </div>
 </section>

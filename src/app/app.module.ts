@@ -36,7 +36,6 @@ import { DrawerComponent } from './components/drawer/drawer.component';
 import { EmployeeDetailsComponent } from './components/employee-details/employee-details.component';
 import { LeaveComponent } from './components/employee-details/leave/leave.component';
 import { AttendanceComponent } from './components/employee-details/attendance/attendance.component';
-import { PerformanceComponent } from './components/employee-details/performance/performance.component';
 import { DashboardComponent } from "./components/employee-details/dashboard/dashboard.component";
 import { PerformanceCircleComponent } from "./components/custom-components/performance-circle/performance-circle.component";
 import { MyTeamComponent } from './components/custom-components/my-team/my-team.component';
@@ -56,7 +55,6 @@ import { ExpenseComponent } from './components/custom-components/expense/expense
     EmployeeDetailsComponent,
     LeaveComponent,
     AttendanceComponent,
-    PerformanceComponent,
     PerformanceCircleComponent,
     MyTeamComponent,
     PerformanceComparisonChartComponent,

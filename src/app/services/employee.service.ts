@@ -17,6 +17,8 @@ export class EmployeeService {
   }
 
   private apiUrl = 'http://localhost:3000/employees';
+  private apiUrlDetails = 'http://localhost:3000/employeeDetails';
+
   httpOptions = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json',
@@ -44,7 +46,12 @@ export class EmployeeService {
   deleteEmployee(id: number): Observable<void> {
     return this.http.delete<void>(`${this.apiUrl}/${id}`);
   }
-
+  getEmployeeDetails(id: number): Observable<any>{
+    return this.http.get<any>(`${this.apiUrlDetails}?id=${id}`);
+  }
+  getDefaultEmpDetails(): Observable<any> { //common api call when employee details are not available
+    return this.http.get<any>(`${this.apiUrlDetails}?id=1`);
+  }
   logout() {
     // Clear any stored user data
     this.setEmployee(null);

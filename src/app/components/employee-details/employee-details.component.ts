@@ -4,8 +4,6 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Store } from '@ngrx/store';
 import { AppState } from '../../store/app.state';
-import { Employee } from '../../models/employee.model';
-import { Observable } from 'rxjs';
 import { selectEmployeeById } from '../../store/selectors/employee.selectors';
 import { EmployeeService } from '../../services/employee.service';
 

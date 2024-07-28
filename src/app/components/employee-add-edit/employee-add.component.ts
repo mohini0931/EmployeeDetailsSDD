@@ -18,6 +18,7 @@ import {
 import { Employee } from '../../models/employee.model';
 import { NotificationService } from '../../services/notification.service';
 
+//This component handles both Add and Edit options
 @Component({
   selector: 'app-employee-add', 
   templateUrl: './employee-add.component.html', 

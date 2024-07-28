@@ -6,6 +6,7 @@ import { DashboardComponent } from  './../components/employee-details/dashboard/
 import { LeaveComponent } from './../components/employee-details/leave/leave.component';
 import { AttendanceComponent } from './../components/employee-details/attendance/attendance.component';
 import { MyTeamComponent } from './../components/custom-components/my-team/my-team.component';
+import { PerformanceComparisonChartComponent } from '../components/custom-components/performance-comparison-chart/performance-comparison-chart.component';
 
 const routes: Routes = [
   {
@@ -15,7 +16,7 @@ const routes: Routes = [
       { path: 'dashboard', component: DashboardComponent },
       { path: 'leave', component: LeaveComponent },
       { path: 'attendance', component: AttendanceComponent },
-      { path: 'performance', component: MyTeamComponent },
+      { path: 'performance', component: PerformanceComparisonChartComponent },
       { path: '', redirectTo: 'dashboard', pathMatch: 'full' }
     ]
   }

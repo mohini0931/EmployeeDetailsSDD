@@ -10,8 +10,9 @@ Custom Components: Modular and reusable components for different functionalities
 User Authentication: Secure login system with role-based access control.
 Real-time Data Updates: Automatically updates the employee list upon changes.
 Notifications: Success and error messages displayed using snack bars.
-Test Cases: Comprehensive unit tests to ensure application stability.
-Mock API: Uses json-server to perform CRUD operations and mock APIs.
+Test Cases: Comprehensive unit tests to ensure application stability [Written and executed for login and employee-list component]
+Mock API: Uses json-server to perform CRUD operations and to get Employee Details.
+
 Technologies Used
 Angular 17: Framework for building the application.
 Angular Material: UI component library for responsive design.
@@ -88,10 +89,9 @@ src/
 │ ├── login.component.spec.ts
 
 Custom Components
-EmployeeAddComponent: Form for adding and editing employee details.
-EmployeeListComponent: Displays a list of employees with actions to edit or delete.
-EmployeeDetailsComponent: Shows detailed information about an employee.
-DashboardComponent: Overview of key statistics and employee performance.
+
+Performance Chart component.
+Performance Circle component.
 DrawerComponent: Reusable side drawer component.
 ExpenseComponent: Custom component to display employee expenses.
 DeleteConfirmationDialogComponent: Confirmation dialog for delete actions.
