@@ -1,24 +1,27 @@
 .drawer-container {
-    height: 100%;
-    position: relative;
-  }
-  
+  height: 100%;
+  display: flex;
+}
+
+.drawer {
+  width: 400px;
+  max-width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.drawer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
   .drawer {
-  
-    padding: 20px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
   }
-  
-  .drawer-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-  }
-  
-  @media (max-width: 768px) {
-    .drawer {
-      width: 100%;
-    }
-  }
-  
+}

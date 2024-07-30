@@ -1,5 +1,10 @@
 .employee-list-container {
   margin: 20px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd; /* Add gray border */
 }
 
 .employee-list-header {
@@ -8,14 +13,17 @@
   align-items: center;
   background-color: #2e4c6f;
   color: #fff;
-  padding: 10px;
-  border-radius: 4px;
+  padding: 10px 20px;
+  border-radius: 8px 8px 0 0;
 }
 
 .employee-list-header h1 {
   margin: 0;
   font-size: 24px;
-  padding-left: 15px;
+}
+
+.employee-list-header h1 span {
+  font-weight: bold;
 }
 
 .employee-list-actions {
@@ -51,6 +59,8 @@
 
 .mat-paginator {
   margin-top: 20px;
+  background-color: #fff;
+  border-radius: 0 0 8px 8px;
 }
 
 .edit-button mat-icon {
@@ -62,25 +72,31 @@
 }
 
 .drawer-container {
-  height: 100vh; /* Set height to full viewport height */
+  height: auto; /* Allow the drawer container to adjust its height based on content */
+  min-height: 82vh; /* Set minimum height to 82% of the viewport height */
+  max-height: 100vh; /* Set maximum height to full viewport height */
   position: relative;
+  background-color: #fff;
 }
 
 .drawer {
   width: 400px;
   max-width: 100%;
-  height: 100%; /* Ensure drawer takes full height */
   padding: 20px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  overflow: hidden; /* Prevent scrollbars */
+  overflow: auto; /* Allow the drawer to scroll if content overflows */
 }
 
 .mat-drawer-content {
-  height: calc(100vh - 100px); /* Adjust based on header height */
+  background-color: #fff;
 }
 
+.table-container {
+  background-color: #fff;
+  overflow-x: auto;
+}
 
 @media (max-width: 768px) {
   .employee-list-header {
@@ -116,4 +132,11 @@
     font-size: 14px;
     padding: 8px;
   }
+}
+
+.mat-label-class {
+  text-align: center;
+  display: block;
+  margin-top: 20px;
+  font-weight: bold;
 }

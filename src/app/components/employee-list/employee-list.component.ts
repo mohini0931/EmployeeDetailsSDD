@@ -81,11 +81,11 @@ export class EmployeeListComponent implements OnInit, AfterViewInit {
     this.showAddForm = true;
     this.drawer.open();
     
-    this.drawer.openedChange.subscribe((opened) => {
-      if (opened && this.employeeAddComponent) {
+    setTimeout(() => {
+      if (this.employeeAddComponent) {
         this.employeeAddComponent.resetForm();
       }
-    });
+    }, 0);
   }
 
   // Method to close the drawer
@@ -105,11 +105,11 @@ export class EmployeeListComponent implements OnInit, AfterViewInit {
       this.showAddForm = true;
       this.drawer.open();
 
-      this.drawer.openedChange.subscribe((opened) => {
-        if (opened && this.employeeAddComponent) {
+      setTimeout(() => {
+        if (this.employeeAddComponent) {
           this.employeeAddComponent.employeeForm.patchValue(this.selectedEmployee as { [key: string]: any });
         }
-      });
+      }, 0);
     }
   }
 
@@ -215,4 +215,5 @@ export class EmployeeListComponent implements OnInit, AfterViewInit {
     event.stopPropagation();
     this.toggleSelection(row);
   }
+  
 }
