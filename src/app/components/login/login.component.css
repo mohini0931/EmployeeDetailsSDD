@@ -5,29 +5,29 @@
   height: 100vh;
   background-color: #f5f5f5;
   padding: 0 20px;
+  flex-direction: column; /* Ensure column direction for vertical alignment */
 }
 
 .login-card {
   width: 100%;
   max-width: 400px;
   border-radius: 20px;
-  box-shadow: 0px 3px 6px #00000029;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   background-color: white;
   text-align: center;
   overflow: hidden;
   padding-bottom: 2rem;
-  height: 500px; 
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added box shadow */
-}
-
-.formClass {
-  margin: 1rem;
+  height: 600px; /* Increased height */
+  position: relative;
 }
 
 .login-header {
   background-color: #4caf50;
   padding: 30px;
-  margin-bottom: 2rem; /* Increased bottom margin */
+  margin-bottom: 0; /* Remove bottom margin */
+  border-top-left-radius: 20px; /* Add rounded corners */
+  border-top-right-radius: 20px; /* Add rounded corners */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Add shadow effect */
 }
 
 .login-header h1 {
@@ -36,9 +36,13 @@
   color: white;
 }
 
+.formClass {
+  margin: 1rem;
+}
+
 .input-container {
   margin-bottom: 20px;
-  margin-top: 30px; /* Increased top margin */
+  margin-top: 30px; /* Increase top margin */
 }
 
 .custom-input {
@@ -86,12 +90,28 @@
   margin-top: 10px;
 }
 
-@media (max-width: 600px) {
+.login-footer {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 16px;
+  color: #333;
+}
+
+@media (max-width: 200px) {
   .login-card {
     padding: 20px;
+    height: 80vh; /* Adjust height for smaller screens */
   }
 
   .login-header h1 {
     font-size: 20px;
+  }
+
+  .custom-input, .sign-in-button {
+    width: calc(100% - 20px); /* Reduce padding for smaller screens */
+  }
+
+  .forgot-password {
+    font-size: 14px;
   }
 }
