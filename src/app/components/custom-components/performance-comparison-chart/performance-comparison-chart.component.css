@@ -6,7 +6,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
- margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .performance-comparison h2 {
@@ -93,4 +93,17 @@
   margin-top: 5px;
   color: #000;
   order: -1;
+}
+
+
+@media (max-width: 450px) {
+  
+  .bar-group {
+    width: 100%;
+  }
+
+  .bar {
+    width: 100%;
+    margin: 0;
+  }
 }

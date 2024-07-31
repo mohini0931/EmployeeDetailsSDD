@@ -1,5 +1,17 @@
-:host {
+/* :host {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+ */
+ :host {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+canvas {
+  width: 100px;
+  height: 100px;
 }
