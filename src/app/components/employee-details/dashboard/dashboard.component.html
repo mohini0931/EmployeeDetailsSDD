@@ -3,7 +3,7 @@
     <h2>Good afternoon, {{ employee?.name }}!</h2>
     <div class="date-time">
       <mat-icon>access_time</mat-icon>
-      <span>{{ currentDate | date:'dd MMM yyyy, hh:mm a' }}</span>
+      <span>{{ currentDate | date : "dd MMM yyyy, hh:mm a" }}</span>
     </div>
   </header>
 
@@ -14,11 +14,15 @@
         <h2>{{ employeeDetails?.dashboard?.performance?.score }}</h2>
         <div class="good-score-container">
           <div class="vertical-line"></div>
-          <p class="good-score-text">{{ employeeDetails?.dashboard?.performance?.scoreDesc }}</p>
+          <p class="good-score-text">
+            {{ employeeDetails?.dashboard?.performance?.scoreDesc }}
+          </p>
         </div>
       </div>
       <div class="performance-right" *ngIf="performanceCirclePercentage">
-        <app-performance-circle [percentage]="performanceCirclePercentage"></app-performance-circle>
+        <app-performance-circle
+          [percentage]="performanceCirclePercentage"
+        ></app-performance-circle>
       </div>
     </article>
     <article class="stat">
@@ -26,7 +30,10 @@
       <h2>{{ employeeDetails?.dashboard?.taskAssigned?.total }}</h2>
       <div class="good-score-container">
         <div class="vertical-line"></div>
-        <p class="good-score-text">{{ employeeDetails?.dashboard?.taskAssigned?.averageTasks }} Average tasks per user</p>
+        <p class="good-score-text">
+          {{ employeeDetails?.dashboard?.taskAssigned?.averageTasks }} Average
+          tasks per user
+        </p>
       </div>
       <button class="info-icon">
         <mat-icon>assignment</mat-icon>
@@ -37,7 +44,9 @@
       <h2>{{ employeeDetails?.dashboard?.taskCompletion?.percentage }}%</h2>
       <div class="good-score-container">
         <div class="vertical-line-green"></div>
-        <p class="good-score-text">{{ employeeDetails?.dashboard?.taskCompletion?.scoreDesc }}</p>
+        <p class="good-score-text">
+          {{ employeeDetails?.dashboard?.taskCompletion?.scoreDesc }}
+        </p>
       </div>
       <button class="info-icon">
         <mat-icon>grading</mat-icon>
@@ -48,7 +57,9 @@
       <h2>{{ employeeDetails?.dashboard?.attendance?.percentage }}%</h2>
       <div class="good-score-container">
         <div class="vertical-line-orange"></div>
-        <p class="good-score-text">{{ employeeDetails?.dashboard?.attendance?.scoreDesc }}</p>
+        <p class="good-score-text">
+          {{ employeeDetails?.dashboard?.attendance?.scoreDesc }}
+        </p>
       </div>
       <button class="info-icon" (click)="onAttendanceClick()">
         <mat-icon>assignment_ind</mat-icon>
@@ -59,7 +70,9 @@
       <h2>{{ employeeDetails?.dashboard?.leaves?.percentage }}%</h2>
       <div class="good-score-container">
         <div class="vertical-line-green"></div>
-        <p class="good-score-text">{{ employeeDetails?.dashboard?.leaves?.scoreDesc }}</p>
+        <p class="good-score-text">
+          {{ employeeDetails?.dashboard?.leaves?.scoreDesc }}
+        </p>
       </div>
       <button class="info-icon" (click)="onLeavesClick()">
         <mat-icon>login</mat-icon>
@@ -74,19 +87,20 @@
     </div>
 
     <div class="right-content">
-       <!-- Adding the Performance Chart component -->
-      <app-performance-comparison-chart 
+      <!-- Adding the Performance Chart component -->
+
+      <app-performance-comparison-chart
         [title]="'Performance Comparison'"
-        [thisYearData]="thisYearData" 
-        [lastYearData]="lastYearData" 
-        [labels]="labels">
+        [thisYearData]="thisYearData"
+        [lastYearData]="lastYearData"
+        [labels]="labels"
+      >
       </app-performance-comparison-chart>
 
-       <!-- Adding the Expenses component -->
+      <!-- Adding the Expenses component -->
       <div *ngIf="employeeExpenses && employeeExpenses?.length > 0">
         <app-expense [expenses]="employeeExpenses"></app-expense>
       </div>
-     
     </div>
   </section>
 </div>

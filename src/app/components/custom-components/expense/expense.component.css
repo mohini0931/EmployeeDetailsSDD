@@ -3,7 +3,11 @@
   padding: 20px;
   border-radius: 10px;
   flex: 1;
-  overflow: scroll; 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 50%; /* Adjust height to ensure both sections match */
+  overflow: scroll;
 }
 
 .expenses h2 {

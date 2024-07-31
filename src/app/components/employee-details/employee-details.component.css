@@ -93,7 +93,11 @@
   padding: 20px;
   overflow-y: auto; /* Enable scrolling for the content */
 }
-
+.employee-details-label {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
 /* Responsive styles */
 @media (max-width: 768px) {
   .header nav ul {
@@ -104,9 +108,9 @@
     flex-direction: column;
   }
 
-  .sidebar {
+ /*  .sidebar {
     width: 100%;
-  }
+  } */
 
   .content {
     padding: 10px;
