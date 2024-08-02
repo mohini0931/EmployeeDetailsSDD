@@ -31,7 +31,7 @@
     {
       "id": "5",
       "name": "Bob Luise",
-      "email": "bobbrown@mail.com",
+      "email": "borown@mail.com",
       "address": "101 Maple St, Star City, USA",
       "phone": "(555) 456-7890"
     },
@@ -50,18 +50,32 @@
       "phone": "9975800408"
     },
     {
-      "id": "37754",
-      "name": "Mohini Patil",
-      "email": "mo@gmail.com",
-      "address": "dso",
-      "phone": "843847837458"
-    },
-    {
       "id": "96120",
-      "name": "Aman Lodha Patil",
+      "name": "Aman Lodha",
       "email": "aman@gmail.com",
       "address": "dso",
       "phone": "4653846"
+    },
+    {
+      "id": "93467",
+      "name": "Eduard Sino",
+      "email": "es@gmail.com",
+      "address": "JBL",
+      "phone": "6666666678"
+    },
+    {
+      "id": "40297",
+      "name": "Sunita Patil",
+      "email": "sp@gmail.com",
+      "address": "jabel ali",
+      "phone": "5454555"
+    },
+    {
+      "id": "91457",
+      "name": "Oleks",
+      "email": "oleks@gmail.com",
+      "address": "ttty",
+      "phone": "234234"
     }
   ],
   "employeeDetails": [

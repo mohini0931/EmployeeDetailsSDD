@@ -1,5 +1,5 @@
 <div class="employee-add-container">
-  <form [formGroup]="employeeForm" (ngSubmit)="onSubmit()">
+  <form [formGroup]="employeeForm" (ngSubmit)="onSubmit(employeeForm.value, formDirective)" #formDirective="ngForm">
     <mat-form-field appearance="fill">
       <mat-label>Employee ID</mat-label>
       <input matInput formControlName="id">

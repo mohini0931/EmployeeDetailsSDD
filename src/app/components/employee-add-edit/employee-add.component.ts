@@ -2,11 +2,9 @@ import {
   Component,
   EventEmitter,
   Input,
-  OnInit,
   Output,
   SimpleChanges,
-  OnChanges,
-  AfterViewInit,
+  OnChanges
 } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Store } from '@ngrx/store';
@@ -17,6 +15,7 @@ import {
 } from '../../store/actions/employee.actions';
 import { Employee } from '../../models/employee.model';
 import { NotificationService } from '../../services/notification.service';
+import { FormGroupDirective } from '@angular/forms';
 
 //This component handles both Add and Edit options
 @Component({
@@ -24,7 +23,7 @@ import { NotificationService } from '../../services/notification.service';
   templateUrl: './employee-add.component.html', 
   styleUrls: ['./employee-add.component.css'] 
 })
-export class EmployeeAddComponent implements OnInit, OnChanges, AfterViewInit {
+export class EmployeeAddComponent implements OnChanges {
   @Input() employee: Employee | null = null; // Input property to receive an employee object for editing
   @Output() formClosed = new EventEmitter<void>(); // Output event emitter to notify parent component when the form is closed
   employeeForm: FormGroup; 
@@ -44,16 +43,6 @@ export class EmployeeAddComponent implements OnInit, OnChanges, AfterViewInit {
     });
   }
 
-  // Lifecycle hook called once the component is initialized
-  ngOnInit(): void {
-    this.resetForm();
-  }
-
-  // Lifecycle hook called after the component's view has been fully initialized
-  ngAfterViewInit(): void {
-    this.resetForm();
-  }
-
   // Lifecycle hook called when any data-bound property of a directive changes
   ngOnChanges(changes: SimpleChanges): void {
     if (changes['employee'] && changes['employee'].currentValue) {
@@ -64,17 +53,19 @@ export class EmployeeAddComponent implements OnInit, OnChanges, AfterViewInit {
       changes['employee'].currentValue === null
     ) {
       // If employee input is null, reset the form
-      this.resetForm();
+     this.employeeForm.reset(); // Reset form data
+  
     }
   }
 
   // Method to handle form submission
-  onSubmit(): void {
+  onSubmit(formData: FormGroup,
+    formDirective: FormGroupDirective): void {
     if (this.employeeForm.valid) {
       // If form is valid, create an employee object from form values
       const employeeData: Employee = {
         ...this.employeeForm.getRawValue(),
-        id: this.employee?.id ?? this.generateId(),
+        id: this.employee?.id ?? this.generateId().toString(),
       };
       if (this.employee) {
         // If an employee exists, dispatch update action
@@ -86,7 +77,8 @@ export class EmployeeAddComponent implements OnInit, OnChanges, AfterViewInit {
         this.notificationService.showSuccess('Employee has been added successfully.');
       }
       // Reset the form and emit formClosed event
-      this.resetForm();
+      this.employeeForm.reset(); // Reset form data
+      formDirective.resetForm(); // Reset the ugly validators
       this.formClosed.emit();
     } else {
       // If form is invalid, mark all controls as touched to show validation errors
@@ -105,18 +97,18 @@ export class EmployeeAddComponent implements OnInit, OnChanges, AfterViewInit {
   }
 
   // Private method to mark all controls in the form group as touched
-  private markFormAsTouched(formGroup: FormGroup): void {
+   private markFormAsTouched(formGroup: FormGroup): void {
     Object.values(formGroup.controls).forEach((control) => {
       control.markAsTouched();
     });
-  }
+  } 
 
   // Private method to mark all controls in the form group as untouched
   private markFormAsUntouched(formGroup: FormGroup): void {
     Object.values(formGroup.controls).forEach((control) => {
       control.markAsUntouched();
     });
-  }
+  } 
 
   // Method to reset the form to its initial state
   resetForm(): void {
@@ -129,5 +121,6 @@ export class EmployeeAddComponent implements OnInit, OnChanges, AfterViewInit {
     });
     this.markFormAsUntouched(this.employeeForm);
     this.employeeForm.markAsPristine();
+    this.employeeForm.updateValueAndValidity();
   }
 }

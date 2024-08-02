@@ -56,7 +56,7 @@ export class EmployeeEffects {
     this.actions$.pipe(
       ofType(EmployeeActions.deleteEmployee), // Listening for the deleteEmployee action
       mergeMap(action =>
-        this.employeeService.deleteEmployee(action.id).pipe( // Calling the deleteEmployee method of the EmployeeService with the employee ID
+        this.employeeService.deleteEmployee(action.id.toString()).pipe( // Calling the deleteEmployee method of the EmployeeService with the employee ID
           map(() => EmployeeActions.deleteEmployeeSuccess({ id: action.id })), // Dispatching deleteEmployeeSuccess action with the deleted employee ID
           catchError(error => of(EmployeeActions.deleteEmployeeFailure({ error }))) // Handling errors and dispatching deleteEmployeeFailure action
         )

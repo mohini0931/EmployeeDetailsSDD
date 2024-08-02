@@ -43,7 +43,7 @@ export class EmployeeService {
     );
   }
 
-  deleteEmployee(id: number): Observable<void> {
+  deleteEmployee(id: string): Observable<void> {
     return this.http.delete<void>(`${this.apiUrl}/${id}`);
   }
   getEmployeeDetails(id: number): Observable<any>{
