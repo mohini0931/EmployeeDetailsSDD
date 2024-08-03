@@ -43,20 +43,6 @@
       "phone": "(555) 567-8901"
     },
     {
-      "id": "5885",
-      "name": "Mohini Narwade",
-      "email": "m@gmail.com",
-      "address": "dso",
-      "phone": "9975800408"
-    },
-    {
-      "id": "96120",
-      "name": "Aman Lodha",
-      "email": "aman@gmail.com",
-      "address": "dso",
-      "phone": "4653846"
-    },
-    {
       "id": "93467",
       "name": "Eduard Sino",
       "email": "es@gmail.com",
@@ -108,7 +94,7 @@
         {
           "id": 1,
           "name": "Alena Gouse",
-          "role": "UI Designer",
+          "role": "UI Designer - UID1",
           "score": 201,
           "thisMonth": 83.45,
           "lastMonth": 82,
@@ -118,7 +104,7 @@
         {
           "id": 2,
           "name": "Alan Walker",
-          "role": "UI Designer",
+          "role": "UI Designer - UID3",
           "score": 223,
           "thisMonth": 97.98,
           "lastMonth": 61,
@@ -128,7 +114,7 @@
         {
           "id": 3,
           "name": "Miracle Vetrovs",
-          "role": "UI Designer",
+          "role": "UI Designer - UID1",
           "score": 217,
           "thisMonth": 91.65,
           "lastMonth": 87.5,
@@ -138,7 +124,7 @@
         {
           "id": 4,
           "name": "Avery Arwood",
-          "role": "UI Designer",
+          "role": "UI Designer - UID2",
           "score": 187,
           "thisMonth": 72.67,
           "lastMonth": 81.33,
@@ -148,7 +134,7 @@
         {
           "id": 5,
           "name": "John Erkwood",
-          "role": "UI Designer",
+          "role": "UI Designer = UID2",
           "score": 207,
           "thisMonth": 88.98,
           "lastMonth": 77.65,
@@ -235,7 +221,7 @@
         {
           "id": 1,
           "name": "Mitali",
-          "role": "UI Designer",
+          "role": "UI Designer - UID1",
           "score": 201,
           "thisMonth": 83.45,
           "lastMonth": 82,
@@ -245,7 +231,7 @@
         {
           "id": 2,
           "name": "Aman Lodha",
-          "role": "UI Designer",
+          "role": "UI Designer - UID2",
           "score": 223,
           "thisMonth": 97.98,
           "lastMonth": 61,
@@ -255,7 +241,7 @@
         {
           "id": 3,
           "name": "Mohini Narwade",
-          "role": "UI Designer",
+          "role": "UI Designer - UID3",
           "score": 217,
           "thisMonth": 91.65,
           "lastMonth": 87.5,
@@ -265,7 +251,7 @@
         {
           "id": 4,
           "name": "Avina Bor",
-          "role": "UI Designer",
+          "role": "UI Designer - UID4",
           "score": 187,
           "thisMonth": 72.67,
           "lastMonth": 81.33,
@@ -275,7 +261,7 @@
         {
           "id": 5,
           "name": "Jacob",
-          "role": "UI Designer",
+          "role": "UI Designer - UID5",
           "score": 207,
           "thisMonth": 88.98,
           "lastMonth": 77.65,
@@ -305,7 +291,7 @@
       },
       "expenses": [
         {
-          "name": "Alena Gouse",
+          "name": "Mitali",
           "role": "UI Designer - UID1",
           "salary": 60,
           "bonuses": 20,
@@ -314,8 +300,8 @@
           "image": "../../../../assets/woman.png"
         },
         {
-          "name": "Alan Walker",
-          "role": "UI Designer - UID3",
+          "name": "Aman Lodha",
+          "role": "UI Designer - UID2",
           "salary": 70,
           "bonuses": 10,
           "entertainment": 5,
@@ -323,8 +309,8 @@
           "image": "../../../../assets/man.png"
         },
         {
-          "name": "Avery Arwood",
-          "role": "UI Designer - UID2",
+          "name": "Mohini Narwade",
+          "role": "UI Designer - UID3",
           "salary": 80,
           "bonuses": 20,
           "entertainment": 10,
@@ -362,7 +348,7 @@
         {
           "id": 1,
           "name": "Nina Patel",
-          "role": "UI Designer",
+          "role": "UI Designer - UID1",
           "score": 201,
           "thisMonth": 83.45,
           "lastMonth": 82,
@@ -372,7 +358,7 @@
         {
           "id": 2,
           "name": "Chris Johnson",
-          "role": "UI Designer",
+          "role": "UI Designer - UID3",
           "score": 223,
           "thisMonth": 97.98,
           "lastMonth": 61,
@@ -382,7 +368,7 @@
         {
           "id": 3,
           "name": "Sophia Lin",
-          "role": "UI Designer",
+          "role": "UI Designer - UID2",
           "score": 217,
           "thisMonth": 91.65,
           "lastMonth": 87.5,
@@ -392,7 +378,7 @@
         {
           "id": 4,
           "name": "David Lee",
-          "role": "UI Designer",
+          "role": "UI Designer - UID1",
           "score": 187,
           "thisMonth": 72.67,
           "lastMonth": 81.33,
@@ -402,7 +388,7 @@
         {
           "id": 5,
           "name": "Grace Kim",
-          "role": "UI Designer",
+          "role": "UI Designer - UID1",
           "score": 207,
           "thisMonth": 88.98,
           "lastMonth": 77.65,
@@ -489,7 +475,7 @@
         {
           "id": 1,
           "name": "Jasmine Carter",
-          "role": "UI Designer",
+          "role": "UI Designer - UID1",
           "score": 201,
           "thisMonth": 83.45,
           "lastMonth": 82,
@@ -499,7 +485,7 @@
         {
           "id": 2,
           "name": "Ethan Murphy",
-          "role": "UI Designer",
+          "role": "UI Designer - UID3",
           "score": 223,
           "thisMonth": 97.98,
           "lastMonth": 61,
@@ -509,7 +495,7 @@
         {
           "id": 3,
           "name": "Isabella Brown",
-          "role": "UI Designer",
+          "role": "UI Designer - UID2",
           "score": 217,
           "thisMonth": 91.65,
           "lastMonth": 87.5,
@@ -519,7 +505,7 @@
         {
           "id": 4,
           "name": "Liam Davis",
-          "role": "UI Designer",
+          "role": "UI Designer - UID1",
           "score": 187,
           "thisMonth": 72.67,
           "lastMonth": 81.33,
@@ -529,7 +515,7 @@
         {
           "id": 5,
           "name": "Olivia Wilson",
-          "role": "UI Designer",
+          "role": "UI Designer - UID1",
           "score": 207,
           "thisMonth": 88.98,
           "lastMonth": 77.65,
@@ -616,7 +602,7 @@
         {
           "id": 1,
           "name": "Sam Green",
-          "role": "UI Designer",
+          "role": "UI Designer - UID1",
           "score": 201,
           "thisMonth": 83.45,
           "lastMonth": 82,
@@ -626,7 +612,7 @@
         {
           "id": 2,
           "name": "Nancy White",
-          "role": "UI Designer",
+          "role": "UI Designer - UID2",
           "score": 223,
           "thisMonth": 97.98,
           "lastMonth": 61,
@@ -636,7 +622,7 @@
         {
           "id": 3,
           "name": "David Black",
-          "role": "UI Designer",
+          "role": "UI Designer - UID3",
           "score": 217,
           "thisMonth": 91.65,
           "lastMonth": 87.5,
@@ -646,7 +632,7 @@
         {
           "id": 4,
           "name": "Emily Purple",
-          "role": "UI Designer",
+          "role": "UI Designer - UID4",
           "score": 187,
           "thisMonth": 72.67,
           "lastMonth": 81.33,
@@ -656,7 +642,7 @@
         {
           "id": 5,
           "name": "Paul Blue",
-          "role": "UI Designer",
+          "role": "UI Designer - UID6",
           "score": 207,
           "thisMonth": 88.98,
           "lastMonth": 77.65,
@@ -696,7 +682,7 @@
         },
         {
           "name": "Nancy White",
-          "role": "UI Designer - UID3",
+          "role": "UI Designer - UID2",
           "salary": 70,
           "bonuses": 15,
           "entertainment": 5,
@@ -705,7 +691,7 @@
         },
         {
           "name": "Emily Purple",
-          "role": "UI Designer - UID2",
+          "role": "UI Designer - UID3",
           "salary": 80,
           "bonuses": 25,
           "entertainment": 12,
