@@ -18,6 +18,9 @@
 .date-time {
   display: flex;
   align-items: center;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 10px;
 }
 
 .date-time mat-icon {
