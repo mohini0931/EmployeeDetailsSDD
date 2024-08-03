@@ -23,7 +23,7 @@ export class DashboardComponent implements OnInit {
   constructor(
     private router: Router,
     private route: ActivatedRoute,
-    public employeeService: EmployeeService
+    private employeeService: EmployeeService
   ) {
     this.employeeId = this.route.snapshot.paramMap.get('id') || ''; // Retrieve the employee ID from the route
   }
