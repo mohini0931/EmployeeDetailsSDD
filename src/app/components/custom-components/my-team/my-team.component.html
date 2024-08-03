@@ -31,19 +31,20 @@
       <div class="team-cell">This Month</div>
       <div class="team-cell">Last Month</div>
     </div>
-    <div *ngFor="let teamdata of teamDetails; let i = index">
-      <div class="team-row">
-        <div class="team-cell">
-          <img [src]="teamdata?.avatar" alt="Avatar" class="avatar" />
-          {{ teamdata?.name }}
+    <div *ngFor="let teamdata of teamDetails; let i = index" class="team-row">
+      <div class="team-cell team-member-cell">
+        <img [src]="teamdata?.avatar" alt="Avatar" class="avatar" />
+        <div class="team-member-info">
+          <span class="team-member-name">{{ teamdata?.name }}</span>
+          <span class="team-member-role">{{ teamdata?.role }}</span>
         </div>
-        <div class="team-cell">{{ teamdata?.score }}</div>
-        <div class="team-cell">
-          <span class="dot perfect-score"></span>
-          {{ teamdata?.thisMonth }}%
-        </div>
-        <div class="team-cell">{{ teamdata?.lastMonth }}%</div>
       </div>
+      <div class="team-cell">{{ teamdata?.score }}</div>
+      <div class="team-cell">
+        <span class="dot" [ngClass]="teamdata?.performanceCategory"></span>
+        {{ teamdata?.thisMonth }}%
+      </div>
+      <div class="team-cell">{{ teamdata?.lastMonth }}%</div>
     </div>
   </div>
 </section>

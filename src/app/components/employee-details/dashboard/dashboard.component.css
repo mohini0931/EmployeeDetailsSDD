@@ -41,16 +41,24 @@
   position: relative;
   box-sizing: border-box;
 }
-
+.stat p,
+.stat h2 {
+  display: flex;
+  justify-content: flex-start;
+}
 .performance {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+}
+
+.performance-right {
+  position: relative;
+  left: 15px;
 }
 
 .info-icon {
   position: absolute;
-  top: 10px;
+  top: 35px;
   right: 10px;
   background: none;
   border: none;
@@ -67,7 +75,6 @@
 .good-score-container {
   display: flex;
   align-items: center;
-  justify-content: center;
   margin-top: 10px;
 }
 
@@ -97,28 +104,18 @@
 
 .main-content {
   display: flex;
-  flex-wrap: wrap;
   gap: 20px;
-  overflow-y: hidden;
 }
 
-.left-content,
+.left-content {
+  flex: 0 0 calc(59% + 6px); /* Adjusted width */
+}
+
 .right-content {
-  flex: 1;
+  flex: 1; /* Takes the remaining width */
 }
 
-.performance-comparison {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 45%; /* Ensure both sections take equal height */
-  overflow: hidden;
-  margin-bottom: 20px; /* Ensure there is a gap between sections */
-}
-
+.performance-comparison,
 .expenses {
   background-color: #fff;
   padding: 20px;
@@ -126,8 +123,10 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 45%; /* Ensure both sections take equal height */
+  height: calc(50% - 10px); /* Ensure both sections take equal height */
   overflow: hidden;
+  margin-bottom: 20px; /* Ensure there is a gap between sections */
+  flex: 1 1 auto; /* Adjust width */
 }
 
 .team-performance {
@@ -159,6 +158,10 @@
   .expenses {
     height: auto;
   }
+  .performance-right {
+    position: relative;
+    left: 15px;
+  }
 }
 
 @media (max-width: 375px) {
@@ -179,12 +182,10 @@
   }
 
   .performance-right {
-    width: 100%;
     justify-content: center;
   }
 
   .performance {
-    flex-direction: column;
     align-items: flex-start;
   }
 

@@ -4,8 +4,8 @@
   border-radius: 10px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   height: 100%;
+  overflow: hidden; /* Prevents table height from increasing */
 }
 
 .team-performance h2 {
@@ -78,39 +78,64 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  overflow-y: auto; /* Add scroll if the number of rows increases */
 }
 
 .team-row {
   display: flex;
   justify-content: space-between;
-  padding: 10px 0;
-  border-bottom: 1px solid #ddd;
+  padding: 15px 0; /* Increased padding for more space between rows */
 }
 
 .team-row.header {
   border-radius: 20px;
   background: #eef0f3;
+  border-bottom: 1px solid #ddd; /* Ensure header row has a border */
 }
 
 .team-cell {
-  width: 24%;
+  flex: 1;
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 }
 
-.team-cell img.avatar {
+.team-cell.team-member-cell {
+  justify-content: flex-start;
+  display: flex;
+  align-items: center;
+}
+
+.team-member-info {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  align-items: flex-start; /* Ensure alignment starts from the same position */
+}
+
+.team-member-name {
+  font-weight: bold;
+}
+
+.team-member-role {
+  font-size: 0.9em;
+  color: #555;
+  margin-top: 2px; /* Adjust this value to control the spacing between name and role */
+}
+
+.team-cell.team-member-cell img.avatar {
   width: 24px;
   height: 24px;
   border-radius: 50%;
-  margin-right: 5px;
-  vertical-align: middle;
 }
 
-.team-cell:last-child {
-  border-left: 1px solid #ddd;
+.team-cell:nth-child(3) {
+  border-right: 1px solid #ddd; /* Add the vertical border between 3rd and 4th column */
 }
 
-@media (max-width: 768px) {
+@media (max-width: 350px) {
   .team-row {
     flex-direction: column;
   }
@@ -118,5 +143,9 @@
   .team-cell {
     width: 100%;
     text-align: left;
+    justify-content: flex-start;
+  }
+  .team-cell:nth-child(3) {
+    border: none;
   }
 }
